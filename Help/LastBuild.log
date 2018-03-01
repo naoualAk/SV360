@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shfbBuild product="Sandcastle Help File Builder" version="2015.1.12.0" projectFile="D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\doc.shfbproj" started="13/07/2016 11:06:04">
+<buildStep step="Initializing">
+Finding tools...
+The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
+Searching for HTML Help 1 compiler...
+Found HTML Help 1 compiler in &#39;C:\Program Files (x86)\HTML Help Workshop\&#39;
+Locating components in the following folder(s):
+   D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360
+Using presentation style &#39;VS2013&#39; located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013&#39;
+Loading and initializing plug-ins...
+Lightweight Website Style Version 2015.1.12.0
+Copyright &#169; 2006-2015, Eric Woodruff, All Rights Reserved
+Portions Copyright &#169; 2014, Sam Harwell, All Rights Reserved
+</buildStep>
+<buildStep step="ClearWorkFolder">
+Clearing working folder...
+</buildStep>
+<buildStep step="ValidatingDocumentationSources">
+Validating and copying documentation source information
+    Last step completed in 00:00:00,0080
+</buildStep>
+<buildStep step="Failed">
+
+SHFB: Error BE0065: BUILD FAILED: Un &#233;l&#233;ment avec la m&#234;me cl&#233; a d&#233;j&#224; &#233;t&#233; ajout&#233;.
+   &#224; System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   &#224; System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   &#224; SandcastleBuilder.Utils.BuildEngine.BuildProcess.ValidateDocumentationSources()
+   &#224; SandcastleBuilder.Utils.BuildEngine.BuildProcess.Build()
+
+</buildStep>
+</shfbBuild>

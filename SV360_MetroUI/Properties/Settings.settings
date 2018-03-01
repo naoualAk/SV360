@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SV360.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ip_addr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">10.33.131.221</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,244 @@
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\bin\x64\Debug\SV360_MetroUI.exe
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\bin\x64\Debug\SV360_MetroUI.pdb
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\bin\x64\Debug\CPro.NET.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\bin\x64\Debug\CProBlob.NET.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\bin\x64\Debug\CProColor.NET.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\bin\x64\Debug\DALSA.SaperaLT.SapClassBasic.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\bin\x64\Debug\MetroFramework.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\bin\x64\Debug\MetroFramework.Fonts.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\bin\x64\Debug\ModbusTCP.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\bin\x64\Debug\ModbusTCP.pdb
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\bin\x64\Debug\ModbusTCP.xml
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\obj\x64\Debug\ResolveAssemblyReference.cache
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\obj\x64\Debug\DALSA.SaperaLT.SapClassGui.AcqConfigDlg.resources
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\obj\x64\Debug\SV360_MetroUI.Properties.Resources.resources
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\obj\x64\Debug\GenerateResource.read.1.tlog
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\obj\x64\Debug\GenerateResource.write.1.tlog
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\obj\x64\Debug\SV360_MetroUI.exe
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\obj\x64\Debug\SV360_MetroUI.pdb
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\obj\x64\Debug\SV360.UI.resources
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\obj\x64\Debug\DALSA.SaperaLT.SapClassGui.AcqConfigDlg.resources
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\obj\x64\Debug\SV360.Properties.Resources.resources
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\obj\x64\Debug\SV360.UI.resources
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\bin\x64\Debug\SV360.exe
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\bin\x64\Debug\SV360.pdb
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\bin\x64\Debug\CPro.NET.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\bin\x64\Debug\CProBlob.NET.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\bin\x64\Debug\CProColor.NET.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\bin\x64\Debug\DALSA.SaperaLT.SapClassBasic.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\bin\x64\Debug\MetroFramework.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\bin\x64\Debug\MetroFramework.Fonts.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\bin\x64\Debug\ModbusTCP.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\bin\x64\Debug\ModbusTCP.pdb
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\bin\x64\Debug\ModbusTCP.xml
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\obj\x64\Debug\SV360.exe
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\obj\x64\Debug\SV360.pdb
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\obj\x64\Debug\SV360.csproj.GenerateResource.Cache
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\obj\x64\Debug\SV360.csprojResolveAssemblyReference.cache
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\bin\x64\Debug\AForge.Neuro.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\bin\x64\Debug\AForge.Genetic.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\bin\x64\Debug\AForge.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\bin\x64\Debug\AForge.Math.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\bin\x64\Debug\AForge.Neuro.xml
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\bin\x64\Debug\AForge.Genetic.xml
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\bin\x64\Debug\AForge.xml
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360\SV360_MetroUI\bin\x64\Debug\AForge.Math.xml
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\obj\x64\Debug\SV360.exe
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\obj\x64\Debug\SV360.pdb
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\bin\x64\Debug\SV360.exe
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\bin\x64\Debug\SV360.pdb
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\bin\x64\Debug\AForge.Neuro.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\bin\x64\Debug\CPro.NET.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\bin\x64\Debug\CProBlob.NET.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\bin\x64\Debug\CProColor.NET.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\bin\x64\Debug\DALSA.SaperaLT.SapClassBasic.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\bin\x64\Debug\AForge.Genetic.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\bin\x64\Debug\AForge.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\bin\x64\Debug\AForge.Math.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\bin\x64\Debug\AForge.Neuro.xml
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\bin\x64\Debug\AForge.Genetic.xml
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\bin\x64\Debug\AForge.xml
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\bin\x64\Debug\AForge.Math.xml
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\obj\x64\Debug\DALSA.SaperaLT.SapClassGui.AcqConfigDlg.resources
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\obj\x64\Debug\SV360.Properties.Resources.resources
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\obj\x64\Debug\SV360.UI.resources
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\obj\x64\Debug\SV360.csproj.GenerateResource.Cache
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\obj\x64\Debug\SV360.csprojResolveAssemblyReference.cache
+F:\emeric leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\obj\x64\Debug\SV360.exe
+F:\emeric leclair\Programmation\Code\Code final\SV360\SV360_MetroUI\obj\x64\Debug\SV360.pdb
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.exe
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.pdb
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\SV360.exe
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\SV360.pdb
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\AForge.Neuro.dll
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\DALSA.SaperaLT.SapClassBasic.dll
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\AForge.Genetic.dll
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\AForge.dll
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\AForge.Math.dll
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.csprojResolveAssemblyReference.cache
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.Properties.Resources.resources
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.csproj.GenerateResource.Cache
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\Emgu.CV.dll
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\Emgu.CV.UI.dll
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\Emgu.Util.dll
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\ZedGraph.dll
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\Emgu.CV.xml
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\Emgu.CV.UI.xml
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\Emgu.Util.xml
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\SV360.exe.config
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\MathNet.Numerics.dll
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\MathNet.Numerics.xml
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\SV360.XML
+D:\Users\pierre.jacob\Documents\PFE_jacob_pierre_2015_2016\Csharp\SV360\SV360\SV360_MetroUI\bin\x64\Debug\SV360.exe.config
+D:\Users\pierre.jacob\Documents\PFE_jacob_pierre_2015_2016\Csharp\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.exe
+D:\Users\pierre.jacob\Documents\PFE_jacob_pierre_2015_2016\Csharp\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.pdb
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\Accord.dll.config
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\Accord.dll
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\Accord.MachineLearning.dll
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\Accord.Math.dll
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\Accord.Statistics.dll
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\Accord.xml
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\Accord.MachineLearning.xml
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\Accord.Math.xml
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\Accord.Statistics.xml
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\Jai_FactoryDotNET.dll
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\log4net.dll
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\Jai_FactoryDotNET.pdb
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\Jai_FactoryDotNET.xml
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\log4net.xml
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.MainForm.resources
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.OlderIHM.UI.resources
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\EPPlus.dll
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\EPPlus.xml
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.ChartUsCo.resources
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.PageTab.UserControlTrier.resources
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.PageTab.UserControlAnalyser.resources
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\AForge.xml
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\AForge.Genetic.xml
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\AForge.Math.xml
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\AForge.Neuro.xml
+D:\Users\damien.delhay\Documents\Travail\Programmation\SV360\SV360\SV360_MetroUI\bin\x64\Debug\ZedGraph.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.AnalysePartModel.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.Analyse.ChartsAnalyse.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.ChartUsCo.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.Analyse.Overview.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.ChartPie.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.SeedCounter.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.Seuils.CheckClasses.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.Seuils.Threshold.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.MorphoShow.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.PageTab.ThresholdingUC.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.PageTab.AnalysisUC.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.PageTab.SortingUC.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.SettingsForm.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.Properties.Resources.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.MainForm.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.Resources.lang.Res.en.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.Resources.lang.Res.fr.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.csproj.GenerateResource.Cache
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\en\SV360.resources.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\fr\SV360.resources.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.exe
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.pdb
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.csprojResolveAssemblyReference.cache
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.Identificator.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.IPConfig.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\SV360.exe.config
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Accord.dll.config
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Documentations SV360.XML
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\SV360.exe
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\SV360.pdb
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\en\SV360.resources.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\fr\SV360.resources.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Accord.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Accord.MachineLearning.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Accord.Math.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Accord.Statistics.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\AForge.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\AForge.Genetic.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\AForge.Math.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\AForge.Neuro.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\DALSA.SaperaLT.SapClassBasic.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Emgu.CV.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Emgu.CV.UI.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Emgu.Util.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\EPPlus.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Jai_FactoryDotNET.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\MathNet.Numerics.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\MetroFramework.Design.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\MetroFramework.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\MetroFramework.Fonts.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\ModbusTCP.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\ObjectListView.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\uEyeDotNet.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\ZedGraph.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\log4net.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Accord.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Accord.MachineLearning.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Accord.Math.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Accord.Statistics.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Emgu.CV.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Emgu.CV.UI.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Emgu.Util.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\EPPlus.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Jai_FactoryDotNET.pdb
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Jai_FactoryDotNET.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\MathNet.Numerics.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\ObjectListView.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\ZedGraph.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\log4net.xml
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.csprojResolveAssemblyReference.cache
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.AnalysePartModel.resources
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.Analyse.ChartsAnalyse.resources
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.Analyse.ChartUsCo.resources
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.Analyse.Overview.resources
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.ChartPie.resources
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.Identificator.resources
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.IPConfig.resources
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.SeedCounter.resources
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.Seuils.CheckClasses.resources
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.Elements.Seuils.Threshold.resources
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.MorphoShow.resources
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.PageTab.SortingUC.resources
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.PageTab.ThresholdingUC.resources
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.PageTab.AnalysisUC.resources
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.SettingsForm.resources
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.Properties.Resources.resources
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.IHM.MainForm.resources
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.Resources.lang.Res.en.resources
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.Resources.lang.Res.fr.resources
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.csproj.GenerateResource.Cache
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.csproj.CoreCompileInputs.cache
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\en\SV360.resources.dll
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\fr\SV360.resources.dll
+P:\Sherif\SV360\SV360_MetroUI\Accord.dll.config
+P:\Sherif\SV360\SV360_MetroUI\SV360.exe.config
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.exe
+P:\Sherif\SV360\SV360_MetroUI\Documentations SV360.XML
+P:\Sherif\SV360\SV360_MetroUI\obj\x64\Debug\SV360.pdb
+P:\Sherif\SV360\SV360_MetroUI\SV360.exe
+P:\Sherif\SV360\SV360_MetroUI\SV360.pdb
+P:\Sherif\SV360\SV360_MetroUI\en\SV360.resources.dll
+P:\Sherif\SV360\SV360_MetroUI\fr\SV360.resources.dll
+P:\Sherif\SV360\SV360_MetroUI\Accord.dll
+P:\Sherif\SV360\SV360_MetroUI\Accord.MachineLearning.dll
+P:\Sherif\SV360\SV360_MetroUI\Accord.Math.dll
+P:\Sherif\SV360\SV360_MetroUI\Accord.Statistics.dll
+P:\Sherif\SV360\SV360_MetroUI\EPPlus.dll
+P:\Sherif\SV360\SV360_MetroUI\MathNet.Numerics.dll
+P:\Sherif\SV360\SV360_MetroUI\ObjectListView.dll
+P:\Sherif\SV360\SV360_MetroUI\log4net.dll
+P:\Sherif\SV360\SV360_MetroUI\Accord.xml
+P:\Sherif\SV360\SV360_MetroUI\Accord.MachineLearning.xml
+P:\Sherif\SV360\SV360_MetroUI\Accord.Math.xml
+P:\Sherif\SV360\SV360_MetroUI\Accord.Statistics.xml
+P:\Sherif\SV360\SV360_MetroUI\Emgu.CV.xml
+P:\Sherif\SV360\SV360_MetroUI\Emgu.CV.UI.xml
+P:\Sherif\SV360\SV360_MetroUI\Emgu.Util.xml
+P:\Sherif\SV360\SV360_MetroUI\EPPlus.xml
+P:\Sherif\SV360\SV360_MetroUI\Jai_FactoryDotNET.pdb
+P:\Sherif\SV360\SV360_MetroUI\Jai_FactoryDotNET.xml
+P:\Sherif\SV360\SV360_MetroUI\MathNet.Numerics.xml
+P:\Sherif\SV360\SV360_MetroUI\ObjectListView.xml
+P:\Sherif\SV360\SV360_MetroUI\ZedGraph.xml
+P:\Sherif\SV360\SV360_MetroUI\log4net.xml

@@ -1,0 +1,3100 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SV360</name>
+    </assembly>
+    <members>
+        <member name="T:SV360.Automatism.Actuator">
+            <summary>
+            Classe qui permet de controler les actionneurs via l'automate
+            </summary>
+        </member>
+        <member name="T:SV360.Automatism.Actuator.IdSlave">
+            <summary>
+            ID des actionneurs correspondant au mot mémoire dans l'automate
+            
+            ID of Bit %M'X' in the logic controller M221 
+            </summary>
+        </member>
+        <member name="F:SV360.Automatism.Actuator.IdSlave.CameraJAI">
+            <summary>
+             trigger cameraJAI
+            </summary>
+        </member>
+        <member name="F:SV360.Automatism.Actuator.IdSlave.Ejector">
+            <summary>
+            Ejection (commande ejection 3, vérin le plus haut).
+            </summary>
+        </member>
+        <member name="F:SV360.Automatism.Actuator.IdSlave.Vibrator">
+            <summary>
+            commande vibrateur
+            </summary>
+        </member>
+        <member name="F:SV360.Automatism.Actuator.IdSlave.CameraIDS">
+            <summary>
+            trigger camera IDS
+            </summary>
+        </member>
+        <member name="F:SV360.Automatism.Actuator.IdSlave.Conveyor">
+            <summary>
+            commande convoyeur
+            </summary>
+        </member>
+        <member name="F:SV360.Automatism.Actuator.IdSlave.BlowingAir">
+            <summary>
+            commande souffle d'air (nettoyage tapis)
+            </summary>
+        </member>
+        <member name="F:SV360.Automatism.Actuator.IdSlave.ResetCounter">
+            <summary>
+            commande pour reset l'ensemble des compteurs 
+            </summary>
+        </member>
+        <member name="P:SV360.Automatism.Actuator.Started">
+            <summary>
+            setter getter started
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Actuator.#ctor(ModbusTCP.Master,System.UInt16)">
+            <summary>
+            Cstructor: 
+                met Started à 0
+            </summary>
+            <param name="master">Connexion ModbusTCP avec l'automate</param>
+            <param name="idSlave">ID de la caméra sur l'automate</param>
+        </member>
+        <member name="M:SV360.Automatism.Actuator.Start">
+            <summary>
+            Méthode qui envoie 1 dans le mot mémoire de l'automate à l'adresse de l'objet (IDSlave)
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Actuator.Stop">
+            <summary>
+            Méthode qui envoie 0 dans le mot mémoire de l'automate à l'adresse de l'objet (IDSlave)
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Actuator.Finalize">
+            <summary>
+            Dstructor: Stop l'actionneur
+            </summary>
+        </member>
+        <member name="T:SV360.Automatism.AutomateScanner">
+            <summary>
+            Classe qui permet de scruter les variables dans l'automate.
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.AutomateScanner.ReadVariable(SV360.Automatism.ScannedVariable,ModbusTCP.Master)">
+            <summary>
+            Permet de lire une variable %M'X' ou %MW'X' de l'automate. 'X' étant l'adresse de la variable.
+            </summary>
+            <param name="scannedVariable">Variable à scanner</param>
+            <param name="master">Master de communication avec l'automate</param>
+        </member>
+        <member name="T:SV360.Automatism.DataType">
+            <summary>
+            Type de donnée pouvant être lue
+            </summary>
+        </member>
+        <member name="F:SV360.Automatism.DataType.Boolean">
+            <summary>
+            Booléen
+            </summary>
+        </member>
+        <member name="F:SV360.Automatism.DataType.Integer">
+            <summary>
+            Integer
+            </summary>
+        </member>
+        <member name="T:SV360.Automatism.ScannedVariable">
+            <summary>
+            Classe de donnée permettant de structurer les variables scannées dans l'automate par le pc
+            </summary>
+        </member>
+        <member name="P:SV360.Automatism.ScannedVariable.addr">
+            <summary>
+            Adresse dans l'automate
+            </summary>
+        </member>
+        <member name="P:SV360.Automatism.ScannedVariable.oldValue">
+            <summary>
+            Valeur précédente
+            </summary>
+        </member>
+        <member name="P:SV360.Automatism.ScannedVariable.currentValue">
+            <summary>
+            Valeur actuelle
+            </summary>
+        </member>
+        <member name="T:SV360.Automatism.NamespaceDoc">
+            <summary>
+            Le  namespace <see cref="N:SV360.Automatism"/> contient les classes pour controler les périphériques exterieurs:
+            <list type="bullet">    
+                <item> Camera</item>
+                <item>Communication avec l'automate</item>
+            </list>
+            </summary>
+        </member>
+        <member name="T:SV360.Automatism.Camera.NamespaceDoc">
+            <summary>
+            Le  namespace <see cref="N:SV360.Automatism.Camera"/> contient les classes qui permettent de controler les cameras:
+                - IDS 
+                - JAI
+                - Sapera SDK (utilisé pour le controle de la caméra JAI BB-500-GE)
+            </summary>
+        </member>
+        <member name="T:SV360.Automatism.Camera.CameraJAI">
+            <summary>
+            Classe qui permet de controler une caméra JAI
+            </summary>
+        </member>
+        <member name="E:SV360.Automatism.Camera.CameraJAI.AcquisitionNotify">
+            <summary>
+            Event déclenché quand une acquisition est prise par la caméra
+            </summary>
+        </member>
+        <member name="E:SV360.Automatism.Camera.CameraJAI.CameraNotFounded">
+            <summary>
+            Event déclenché quand la camera est perdu (perte de signal)
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Camera.CameraJAI.#ctor(ModbusTCP.Master,System.UInt16)">
+            <summary>
+            Constructeur CameraIDS permet 
+                d'ouvrir la communication avec une caméra JAI, 
+                
+            Les deux paramètres sont utilisés si il y a une intéraction entre automate et caméra (exemple :  un trigger)
+            </summary>
+            <param name="master">Connexion ModbusTCP avec l'automate</param>
+            <param name="idSlave">ID de la caméra sur l'automate</param>
+        </member>
+        <member name="M:SV360.Automatism.Camera.CameraJAI.UpdateCam">
+            <summary>
+            Permet de mettre à jour la caméra
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Camera.CameraJAI.HandleImage(Jai_FactoryDotNET.Jai_FactoryWrapper.ImageInfo@)">
+            <summary>
+            Executer lors d'une reception d'image
+            </summary>
+            <param name="ImageInfo"></param>
+        </member>
+        <member name="M:SV360.Automatism.Camera.CameraJAI.TakeAcquisition">
+            <summary>
+            Permet de demander à l'automate de d'envoyer un trigger à la caméra
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Camera.CameraJAI.Stop">
+            <summary>
+            Stop le mode acquisition de la caméra
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Camera.CameraJAI.SetSensibility(System.Int32)">
+            <summary>
+            non implémentée
+            </summary>
+            <param name="sensibility"></param>
+        </member>
+        <member name="M:SV360.Automatism.Camera.CameraJAI.Start">
+            <summary>
+            Start le mode acuistion de la caméra
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Camera.CameraJAI.isConnected">
+            <summary>
+            return le bool connected
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Automatism.Camera.CameraJAI.Close">
+            <summary>
+            Ferme les connexions avec la caméra
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Camera.CameraJAI.Finalize">
+            <summary>
+            Destructeur : Ferme les connexions avec la cam
+            </summary>
+        </member>
+        <member name="T:SV360.Automatism.Camera.CameraSapera">
+            <summary>
+            Le code était utilisé pour piloter la caméra JAI à travers le SDK Sapera
+            Older code for Driver Sapera 
+            OBSOLETE CODE!!
+            </summary>
+        </member>
+        <member name="E:SV360.Automatism.Camera.CameraSapera.CameraNotFounded">
+            Notification after acquisition
+        </member>
+        <member name="T:SV360.Automatism.Camera.Camera">
+            <summary>
+            Abstract class for 
+            the minimal atttribute and method for camera
+            </summary>
+        </member>
+        <member name="E:SV360.Automatism.Camera.Camera.AcquisitionNotify">
+            <summary>
+            Acquisition Notify
+            </summary>
+        </member>
+        <member name="E:SV360.Automatism.Camera.Camera.CameraNotFounded">
+            <summary>
+             Notify when the camera is not founded during the starting
+            </summary>
+        </member>
+        <member name="F:SV360.Automatism.Camera.Camera.image">
+            <summary>
+            Image of acquisition 
+            </summary>
+        </member>
+        <member name="P:SV360.Automatism.Camera.Camera.Image">
+            <summary>
+            Getter of image
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Camera.Camera.#ctor(ModbusTCP.Master,System.UInt16)">
+            <summary>
+            Constructeur d'un objet camera
+            
+            Les deux paramètres sont utilisés si il y a une intéraction entre automate et caméra (exemple :  un trigger)
+            </summary>
+            <param name="master">Connexion ModbusTCP avec l'automate</param>
+            <param name="idSlave">ID de la caméra sur l'automate</param>
+        </member>
+        <member name="M:SV360.Automatism.Camera.Camera.TakeAcquisition">
+            <summary>
+            trigger an acquisition 
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Camera.Camera.Stop">
+            <summary>
+            stop the camera
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Camera.Camera.Start">
+            <summary>
+            start the camera
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Camera.Camera.Close">
+            <summary>
+            close camera and dispose memory
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Camera.Camera.SetSensibility(System.Int32)">
+            <summary>
+            setter of sensibility camera
+            </summary>
+            <param name="sensibility"></param>
+        </member>
+        <member name="T:SV360.Automatism.Camera.CameraIDS">
+            <summary>
+            Classe qui permet de piloter une camera IDS
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Camera.CameraIDS.#ctor(ModbusTCP.Master,System.UInt16)">
+            <summary>
+            Constructeur CameraIDS permet 
+                d'ouvrir la communication avec une caméra IDS, 
+                charger la configuration "Directory.GetCurrentDirectory() +  @"\cfg\IDS.ini""
+                Forcer le mode trigger
+                Start l'acquisition de la caméra
+                
+            Les deux paramètres sont utilisés si il y a une intéraction entre automate et caméra (exemple :  un trigger)
+            </summary>
+            <param name="master">Connexion ModbusTCP avec l'automate</param>
+            <param name="idSlave">ID de la caméra sur l'automate</param>
+        </member>
+        <member name="E:SV360.Automatism.Camera.CameraIDS.AcquisitionNotify">
+            <summary>
+            Event déclenché quand une acquisition est prise par la caméra
+            </summary>
+        </member>
+        <member name="E:SV360.Automatism.Camera.CameraIDS.CameraNotFounded">
+            <summary>
+            Event déclenché quand la camera est perdu (perte de signal)
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Camera.CameraIDS.Close">
+            <summary>
+            non implementée
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Camera.CameraIDS.SetSensibility(System.Int32)">
+            <summary>
+            non implémentée
+            </summary>
+            <param name="sensibility"></param>
+        </member>
+        <member name="M:SV360.Automatism.Camera.CameraIDS.Start">
+            <summary>
+            Met la caméra en mode acquisition.
+            Par défaut, la caméra attendra un trigger
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Camera.CameraIDS.Stop">
+            <summary>
+            Stop le mode acquistion de la caméra
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Camera.CameraIDS.TakeAcquisition">
+            <summary>
+            Demande à l'automate d'envoyer un trigger à la caméra
+            </summary>
+        </member>
+        <member name="T:SV360.Automatism.EjectionMem">
+            <summary>
+            Classe qui envoie les commandes à l'automate qui permet de piloter les ejections.
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.EjectionMem.#ctor(ModbusTCP.Master)">
+            <summary>
+            Cstor : set la connexion Modbus.
+            </summary>
+            <param name="master">Connexion ModbusTCP avec l'automate</param>
+        </member>
+        <member name="M:SV360.Automatism.EjectionMem.SetClass(System.Int32)">
+            <summary>
+             Envoie la valeur dans la file des prochaines sorties à l'automate.
+            </summary>
+            <param name="value">Valeur de la prochaine sortie (doit être compris entre 0 et 3)</param>
+        </member>
+        <member name="T:SV360.Automatism.Slave">
+            <summary>
+            Classe abstraite qui est utilisé par les classes en relation avec l'automate 
+            </summary>
+        </member>
+        <member name="F:SV360.Automatism.Slave.master">
+            <summary>
+            Master de la communication MODBUS
+            </summary>
+        </member>
+        <member name="F:SV360.Automatism.Slave.idSlave">
+            <summary>
+            Mot mémoire de l'esclave 
+                envoi   1 pour activer
+                        0 pour désactiver
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.Slave.#ctor(ModbusTCP.Master,System.UInt16)">
+            <summary>
+            Cstr : 
+                set master et idslave.
+            </summary>
+            <param name="master"></param>
+            <param name="idSlave"></param>
+        </member>
+        <member name="M:SV360.Automatism.Slave.Send(System.Boolean)">
+            <summary>
+            Envoie (OnOff) 1 ou 0 dans l'adresse mot mémoire dédié à l'esclave.
+            </summary>
+            <param name="OnOff">Valeur à envoyer</param>
+        </member>
+        <member name="T:SV360.Automatism.SystemController">
+            <summary>
+            Classe qui permet d'englober tout les périphériques liés à la machine :
+            <list type="bullet">
+                <item>vibrator</item>
+                <item>ejection</item>
+                <item>convoyeur</item>
+                <item>caméra</item>
+            </list> 
+            </summary>
+        </member>
+        <member name="F:SV360.Automatism.SystemController.cameraIDS">
+            <summary>
+            Objet qui permet de faire le lien avec une caméra IDS
+            </summary>
+        </member>
+        <member name="F:SV360.Automatism.SystemController.hasTakeIDSBackGround">
+            <summary>
+            bool qui permet de savoir si le fond a bien été pris
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.SystemController.#ctor">
+            <summary>
+            Cstor : 
+                Réalise la connexion à l'automate.
+                Si la connexion n'est pas réussi, il ya un lancement de la fenetre IPConfig pour modifier l'ip.
+                Si la connexion réussi, iniatialise tout les périphériques.
+                Stop le vibrateur et le convoyeur.
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.SystemController.Finalize">
+            <summary>
+            Dstor : 
+                Ferme tout les périphériques
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.SystemController.Run">
+            <summary>
+            Permet d'activer :
+            <list type="bullet">
+                <item>la caméraIDS</item>
+                <item>le convoyeur</item>
+                <item>le vibrateur</item>
+                <item>le souffle d'air (nettoyage du tapis)</item>
+                </list>
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.SystemController.StartConveyor">
+            <summary>
+            Demande d'activation du convoyeur à l'automate
+            Attente de 1s pour sa mise en route
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.SystemController.StopConveyor">
+            <summary>
+            Stop le convoyeur
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.SystemController.ConveyorIsStarted">
+            <summary>
+            Getter de l'activation du convoyeur
+            </summary>
+            <returns>true : convoyeur est activé
+            false : convoyeur ne tourne pas</returns>
+        </member>
+        <member name="M:SV360.Automatism.SystemController.StartVibrator">
+            <summary>
+            Actionne le vibrateur
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.SystemController.StopVibrator">
+            <summary>
+            Stop le vibrateur
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.SystemController.VibratorIsStarted">
+            <summary>
+            Getter de l'activation du vibrateur
+            </summary>
+            <returns>true : vibrateur est activé
+            false : vibrateur ne fonctionne pas</returns>
+        </member>
+        <member name="M:SV360.Automatism.SystemController.TakeAcquisitionBackGround">
+            <summary>
+            Déclenche la prise d'acquisitions du background
+                5 imgs sont prises par intervalle de 0.5s 
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.SystemController.SetNextEject(System.Int32)">
+            <summary>
+            Setter pour enregistrer une valeur dans la file des prochaines sorties dans l'automate
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:SV360.Automatism.SystemController.Eject(System.Boolean)">
+            <summary>
+            Permet de lancer l'ejection (activer les vérins)
+            L'automate ejectera par rapport à la première valeur dans la file des sorties.
+            </summary>
+            <param name="OnOff">Commencer ejection = true, stop ejection = false</param>
+        </member>
+        <member name="M:SV360.Automatism.SystemController.IsRunning">
+            <summary>
+            getter que le système est en fonctionnement
+            </summary>
+            <returns>true: en fonctionnement
+            false: non fonctionnement</returns>
+        </member>
+        <member name="M:SV360.Automatism.SystemController.StopActuators">
+            <summary>
+            Stop les actionneurs mécaniques: 
+            <list type="bullet">
+                <item>convoyeur</item>
+                <item>vibrateur</item>
+                <item>souffle d'air (nettoyage)</item>
+                </list>
+            </summary>
+        </member>
+        <member name="M:SV360.Automatism.SystemController.Close">
+            <summary>
+            Ferme toutes les communications avec les périphériques
+            </summary>
+        </member>
+        <member name="T:SV360.Data.WAVELENGTH">
+            <summary>
+            enumération des différentes longueurs d'ondes possibles
+            </summary>
+        </member>
+        <member name="F:SV360.Data.WAVELENGTH.RGB">
+            <summary>
+            RGB (par défaut)
+            </summary>
+        </member>
+        <member name="F:SV360.Data.WAVELENGTH.RED630">
+            <summary>
+            RED630
+            </summary>
+        </member>
+        <member name="F:SV360.Data.WAVELENGTH.GREEN525">
+            <summary>
+            GREEN 525
+            </summary>
+        </member>
+        <member name="F:SV360.Data.WAVELENGTH.BLUE405">
+            <summary>
+            blue 405
+            </summary>
+        </member>
+        <member name="T:SV360.Data.Acquisition">
+            <summary>
+            Classe qui contient toutes les données liées à une acquisition.
+            Chaque acquisition possède une longueur d'onde, image brute, et une liste de vue (exemple : 2 pr convoyeur, 4 pour vision globale)
+            </summary>
+        </member>
+        <member name="P:SV360.Data.Acquisition.Image">
+            <summary>
+            Setter Getter de l'image brute
+            </summary>
+        </member>
+        <member name="P:SV360.Data.Acquisition.Views">
+            <summary>
+            Setter getter de la liste des vues 
+                 exemple : 
+                    2 vues pr convoyeur, 
+                    4 vues pour vision globale
+            </summary>
+        </member>
+        <member name="P:SV360.Data.Acquisition.Wavelength">
+            <summary>
+            Getter setter longueur d'onde correspondant à l'acquisition
+            </summary>
+        </member>
+        <member name="M:SV360.Data.Acquisition.#ctor(Emgu.CV.Image{Emgu.CV.Structure.Rgb,System.Byte})">
+            <summary>
+            Cstor: 
+                Set l'image brute
+            </summary>
+            <param name="imSrc">image brute nécéssaire pour avoir une acquisition</param>
+        </member>
+        <member name="M:SV360.Data.Acquisition.AddView(SV360.Data.View)">
+            <summary>
+            Permet d'ajouter une vue à liste des vues
+            </summary>
+            <param name="view">vue à ajouter</param>
+            <returns>true: ajout réussi
+            false : ajout non réussi</returns>
+        </member>
+        <member name="M:SV360.Data.Acquisition.Dispose">
+            <summary>
+            Supprime et nettoie l'image et les vues de la mémoire 
+            </summary>
+        </member>
+        <member name="T:SV360.Data.Batch">
+            <summary>
+            Classe utilisé pour construire des tableaux de distributions sur la longueur, largeur et épaisseur
+            </summary>
+        </member>
+        <member name="F:SV360.Data.Batch.MAX_DIM">
+            <summary>
+            dimension maximal pris en compte
+            </summary>
+        </member>
+        <member name="F:SV360.Data.Batch.MIN_DIM">
+            <summary>
+            dimension minimal pris en compte
+            </summary>
+        </member>
+        <member name="F:SV360.Data.Batch.STEP">
+            <summary>
+            dimension minimal pris en compte
+            </summary>
+        </member>
+        <member name="F:SV360.Data.Batch.MAX_IDX">
+            <summary>
+            calcule de l'idx maximum à atteindre par rapport au min max et step 
+            </summary>
+        </member>
+        <member name="M:SV360.Data.Batch.#ctor(System.Collections.Generic.List{SV360.Data.Seed})">
+            <summary>
+            Cstor : 
+                Calcule les distributions de la largeur, longueur epaisseur d'une liste de seeds
+            </summary>
+            <param name="seeds">liste de graines à calculer</param>
+        </member>
+        <member name="T:SV360.Data.NamespaceDoc">
+             <summary>
+             Le  namespace <see cref="N:SV360.Data"/> contient les classes "modele" du programme : 
+             <list type="bullet">
+             <item>
+             <term>Données liées au traitement d'images</term>
+                    <description>  Seed, Acquisition, View</description>
+            </item>
+            <item>   
+            <term>Données liées aux paramétrages des seuils</term>
+                      <description> Sorting</description>
+              </item>   
+              <item>
+              <term> Données liées aux stats</term>
+                      <description>  Batch</description>
+             </item>
+            </list>
+            </summary>
+        </member>
+        <member name="T:SV360.Data.Seed">
+            <summary>
+            Classe contenant toutes les données relative à une graines.
+            Chaque seed possède une liste d'acquistions, une classe de tri, les caractéristiques morphologiques et d'anomalies
+            </summary>
+        </member>
+        <member name="T:SV360.Data.Seed.ENumClass">
+            <summary>
+            Enumération des valeurs de classe de tri
+            Les classes de tri sont paramétrés avant le tri par l'utilisateur dans l'onglet Seuillage
+            </summary>
+        </member>
+        <member name="F:SV360.Data.Seed.ENumClass.undefined">
+            <summary>
+            Indéfini (bac le plus à gauche)
+            </summary>
+        </member>
+        <member name="F:SV360.Data.Seed.ENumClass.class1">
+            <summary>
+            Classe 1 (même sortie que undefined)
+            </summary>
+        </member>
+        <member name="F:SV360.Data.Seed.ENumClass.class2">
+            <summary>
+            Classe 2
+            </summary>
+        </member>
+        <member name="F:SV360.Data.Seed.ENumClass.class3">
+            <summary>
+            Classe 3
+            </summary>
+        </member>
+        <member name="F:SV360.Data.Seed.ENumClass.class4">
+            <summary>
+            Classe 4 (bac le plus à droite)
+            </summary>
+        </member>
+        <member name="F:SV360.Data.Seed.nbClass">
+            <summary>
+            nombre de classe possibles
+            </summary>
+        </member>
+        <member name="P:SV360.Data.Seed.Length">
+            <summary>
+            Getter Setter sur la longuer de la graine
+            </summary>
+        </member>
+        <member name="P:SV360.Data.Seed.Width">
+            <summary>
+            Getter Setter sur la largeur
+            </summary>
+        </member>
+        <member name="P:SV360.Data.Seed.Thickness">
+            <summary>
+            Getter Setter sur l'épaisseur
+            </summary>
+        </member>
+        <member name="P:SV360.Data.Seed.IsHaploid">
+            <summary>
+            Getter Setter sur l'état haploid
+            </summary>
+        </member>
+        <member name="P:SV360.Data.Seed.IsGwaned">
+            <summary>
+            Getter Setter sur l'état rongé
+            </summary>
+        </member>
+        <member name="P:SV360.Data.Seed.IsDamaged">
+            <summary>
+            Getter Setter sur l'état fissuré
+            </summary>
+        </member>
+        <member name="P:SV360.Data.Seed.ImageCollection">
+            <summary>
+            Getter Setter sur la liste d'acquisition
+            </summary>
+        </member>
+        <member name="P:SV360.Data.Seed.NumClass">
+            <summary>
+            Getter Setter sur le numéro de la classe
+            </summary>
+        </member>
+        <member name="P:SV360.Data.Seed.VLength">
+            <summary>
+            Getter Setter sur le vecteur de la longueur
+            </summary>
+        </member>
+        <member name="P:SV360.Data.Seed.VWidth">
+            <summary>
+            Getter Setter sur le vecteur de la largeur
+            </summary>
+        </member>
+        <member name="P:SV360.Data.Seed.VThickness">
+            <summary>
+            Getter Setter sur le vecteur de l'épaisseur
+            </summary>
+        </member>
+        <member name="P:SV360.Data.Seed.CoefMirror">
+            <summary>
+            Getter Setter sur le coefficient miroir du convoyeur 
+            (Utilisé pour le debug)
+            </summary>
+        </member>
+        <member name="M:SV360.Data.Seed.#ctor">
+            <summary>
+            Cstor : 
+                mets tout les paramétre à 0. 
+                Classe à trier à 1.
+            </summary>
+        </member>
+        <member name="M:SV360.Data.Seed.#ctor(SV360.Data.Acquisition)">
+            <summary>
+            Cstor : 
+                mets tout les paramétre à 0. 
+                Classe à trier à 1.
+                Set la première acquisition
+            </summary>
+            <param name="v"></param>
+        </member>
+        <member name="M:SV360.Data.Seed.AddAcquisition(SV360.Data.Acquisition)">
+            <summary>
+            Ajoute une acquisition à la graine.
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Data.Seed.RemoveAcquisition(SV360.Data.WAVELENGTH)">
+            <summary>
+            Supprime les acquisitions correspondant à une longueur d'onde
+            </summary>
+            <param name="wl">longueur d'onde à supprimer</param>
+            <returns>true: suppression réussi
+            false: suppresssion non réussi (aucune longueur d'onde trouvée à supprimer)</returns>
+        </member>
+        <member name="M:SV360.Data.Seed.DisposeAcquisitions">
+            <summary>
+            Nettoie et supprime de la mémoire la liste des acquistions.
+            </summary>
+        </member>
+        <member name="T:SV360.Data.Sorting">
+            <summary>
+            Sorting is a singleton.
+            La classe sorting contient les données qui permettent d'enregistrer la liste de liste des critères pour permettre la selectionner la classe d'une graine 
+            </summary>
+        </member>
+        <member name="M:SV360.Data.Sorting.#ctor">
+            <summary>
+            Cstor: 
+                Seulement si aucun objet crée
+            </summary>
+        </member>
+        <member name="P:SV360.Data.Sorting.Criterias">
+             <summary>
+             Getter Setter de la liste de liste de critere
+             Par défaut, la taile de la 1ere liste ne peut pas dépasser 4.
+             
+             La liste est construit comme un arbre, il ne peut donc être défini que d'une certaine façon. 
+                 
+            <para/>  Exemple de liste critere : 
+            <para/>  Arbre de classification :
+            <para/>          Largeur  7  
+            <para/>        ------------
+            <para/>   inf  ||        || sup
+            <para/>        \/        \/
+            <para/>        C3      Epaisseur 5
+            <para/>               -------------
+            <para/>          inf  ||         || sup
+            <para/>               \/         \/        
+            <para/>               C2         C1
+            <para/>  
+            <para/>  Modèle dans la liste: 
+            <para/>      List[0] (C1)    : ListCritere[0] (Critère 1) = Largeur sup  7
+            <para/>                      : ListCritere[1] (Critère 2) = Epaisseur sup  5
+            <para/>                      
+            <para/>      List[1] (C2)    : ListCritere[0] (Critère 1) = Largeur sup  7
+            <para/>                      : ListCritere[1] (Critère 2) = Epaisseur inf  5
+            <para/>                      
+            <para/>      List[2] (C3)    : ListCritere[0] (Critère 1) = Largeur inf  7
+             </summary>
+        </member>
+        <member name="M:SV360.Data.Sorting.Instance">
+            <summary>
+            Demande une instance pour creer (si aucun objet existe) ou accéder au singleton
+            </summary>
+            <returns>L'objet instancié </returns>
+        </member>
+        <member name="T:SV360.Data.View">
+            <summary>
+            view of one side of seed
+            </summary>
+        </member>
+        <member name="F:SV360.Data.View.image">
+            <summary> minimal image of view </summary>
+        </member>
+        <member name="F:SV360.Data.View.mask">
+            <summary> mask of object on the view </summary>
+        </member>
+        <member name="F:SV360.Data.View.maskContour">
+            <summary> mask of contour object on the view </summary>
+        </member>
+        <member name="F:SV360.Data.View.contour">
+            <summary> contour object on the view</summary>
+        </member>
+        <member name="F:SV360.Data.View.approxContour">
+            <summary> contour with less points than 'contour' on the view</summary>
+        </member>
+        <member name="F:SV360.Data.View.convexHull">
+            <summary>
+            Convexhull (contour convexe ou englobant) d'une forme
+            </summary>
+        </member>
+        <member name="F:SV360.Data.View.roi">
+            <summary> roi = size of image</summary>
+        </member>
+        <member name="F:SV360.Data.View.id">
+            <summary> id of view with respect to the horizontal position. 0=left  higher=right  </summary>
+        </member>
+        <member name="P:SV360.Data.View.Image">
+            <summary>
+            Image brute de la vue
+            </summary>
+        </member>
+        <member name="P:SV360.Data.View.Mask">
+            <summary>
+            Mask de la vue (255 ou 0)
+            </summary>
+        </member>
+        <member name="P:SV360.Data.View.MaskContour">
+            <summary>
+            Mask du contour (255 ou 0) 
+            Seul le contour est en blanc.
+            </summary>
+        </member>
+        <member name="P:SV360.Data.View.Contour">
+            <summary>
+            Contour de la forme
+            </summary>
+        </member>
+        <member name="P:SV360.Data.View.ApproxContour">
+            <summary>
+            contour approximatif de la formes
+            </summary>
+        </member>
+        <member name="P:SV360.Data.View.Id">
+            <summary>
+            ID de la vue
+            </summary>
+        </member>
+        <member name="P:SV360.Data.View.ConvexHull">
+            <summary>
+            Getter setter de Convexhull (contour convexe ou englobant) d'une forme
+            </summary>
+        </member>
+        <member name="M:SV360.Data.View.Dispose">
+            <summary>
+            Nettoie et efface de la mémoire les images et masques de la vue.
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.Elements.AnalysePartModel">
+            <summary>
+            Classe qui permet de présenter un userControl avec :
+                un titre
+                un encadrement orange
+                
+            Cette classe permet de standardiser l'affichage
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.AnalysePartModel.#ctor(System.String)">
+            <summary>
+            Cstor : 
+                Initialise les donnéees graphiques et ajoute le titre en fonction du paramètre entré.
+            </summary>
+            <param name="title"> titre du controle</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.AnalysePartModel.#ctor(System.String,System.Windows.Forms.UserControl)">
+            <summary>
+              Cstor : 
+              <list type="bulet">
+                <item>  Initialise les donnéees graphiques</item>
+                <item>  ajoute le titre en fonction du paramètre entré.</item>
+                <item>  ajoute le userControl à l'intérieur</item>
+             </list>
+            </summary>
+            <param name="title"></param>
+            <param name="uc"></param>
+        </member>
+        <member name="M:SV360.IHM.Elements.AnalysePartModel.init(System.String,System.Windows.Forms.UserControl)">
+            <summary>
+             Initialise le titre et le usercontrol 
+            </summary>
+            <param name="title"></param>
+            <param name="uc"></param>
+        </member>
+        <member name="M:SV360.IHM.Elements.AnalysePartModel.UpdateSize(System.Object,System.EventArgs)">
+            <summary>
+            Adapte la taille du titre en fonction de la taille de la fenetre.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:SV360.IHM.Elements.AnalysePartModel.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.AnalysePartModel.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.AnalysePartModel.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.ChartsAnalyse.#ctor(System.Collections.Generic.List{SV360.Data.Seed})">
+            <summary>
+            UserControl qui englobe et instancie les graphiques histogrammes 2D dédiées aux donneés morphologiques des grains (largeur, longueur, épaisseur) en fonction d'une liste de seed.
+            </summary>
+            <param name="seeds">liste de grains</param>
+        </member>
+        <member name="F:SV360.IHM.Elements.Analyse.ChartsAnalyse.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.ChartsAnalyse.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.ChartsAnalyse.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.Elements.Analyse.ChartUsCo">
+            <summary>
+            UserControl qui permet d'afficher un graphique histogramme 2D en fonction d'une liste de grains et la caractéristique voulue (largeur, longueur ou épaisseur)
+            En abscisse: les dimensions en mm par pas de 0.25mm.
+            En ordonnée: le nombre de grains.
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.Elements.Analyse.ChartUsCo.AbscisseType">
+            <summary>
+            Type de caractéristiques
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Analyse.ChartUsCo.AbscisseType.length">
+            <summary>
+            Longueur 
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Analyse.ChartUsCo.AbscisseType.width">
+            <summary>
+            largeur 
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Analyse.ChartUsCo.AbscisseType.thickness">
+            <summary>
+            épaisseur
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.ChartUsCo.updateSize(System.Object,System.EventArgs)">
+            <summary>
+            Adapte la taille des écritures en fonction de la taille du userControl.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.ChartUsCo.#ctor(SV360.IHM.Elements.Analyse.ChartUsCo.AbscisseType,System.Collections.Generic.List{SV360.Data.Seed})">
+            <summary>
+            Cstor  par défaut:
+            <list type="bulet">
+                <item>  Instancie les graphismes du userControl</item>
+                <item>   Charge la liste des grains en fonction de la caractéristique voulue. </item>
+            </list>
+            </summary>
+            <param name="absType">caractéristique</param>
+            <param name="seeds">liste de grains à afficher</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.ChartUsCo.LoadSeeds(System.Collections.Generic.List{SV360.Data.Seed})">
+            <summary>
+             Affiche dans le UserControl, l'histogramme d'une liste de grains. 
+                Les grains inférieurs à 1 ou supérieurs à 15mm ne sont pas pris en compte.
+            </summary>
+            <param name="seeds">liste de grains</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.ChartUsCo.Form1_Load(System.Object,System.EventArgs)">
+            <summary>
+            Création titre
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.ChartUsCo.SaveImage(System.String)">
+            <summary>
+             Savegarde du graphique histogramme en png.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.ChartUsCo.chart1_AnnotationPositionChanging(System.Object,System.Windows.Forms.DataVisualization.Charting.AnnotationPositionChangingEventArgs)">
+            <summary>
+                Gere le deplacement de la barre verticale.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.ChartUsCo.chart1_AnnotationPositionChanged(System.Object,System.EventArgs)">
+            <summary>
+            Gere le deplacement de la barre verticale
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.ChartUsCo.chart1_Click(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+             si click sur le graphique, la barre verticale se déplace automatiquement.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:SV360.IHM.Elements.Analyse.ChartUsCo.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.ChartUsCo.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.ChartUsCo.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.Elements.Analyse.Overview">
+            <summary>
+            UserControl qui affiche les données générales d'une liste de grains : 
+                <list type="bulet">
+            <item>Repartition de la classe</item>    
+            <item>Critères de la classes</item>
+            <item>Nombre de grains dans la classe</item>
+            </list>
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Analyse.Overview.chartPie">
+            Graphique camembert pour la répartition des classes
+        </member>
+        <member name="F:SV360.IHM.Elements.Analyse.Overview.seedCounter">
+            UserControl pour afficher le nombre de grains
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.Overview.#ctor(System.Collections.Generic.List{SV360.Data.Seed})">
+            <summary>
+             Cstor : 
+                Affiche les données générales de toute les classes pour un liste de grains. 
+                
+            </summary>
+            <param name="seeds"> liste de grains</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.Overview.#ctor(System.Collections.Generic.List{SV360.Data.Seed},System.Int32)">
+            <summary>
+             Cstor : 
+                Affiche les données générales pour une classe donnée pour un liste de grains. 
+            </summary>
+            <param name="seeds">liste de grains</param>
+            <param name="numClass">numéro de la classes (doit être compris entre -1 et 4) -1 = total, 0 = indéfini, autres = numéro de la classe</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.Overview.CountbyClass(System.Collections.Generic.List{SV360.Data.Seed},System.Int32)">
+            <summary>
+            renvoi le nombre de grain en fonction d'une classe donnée et d'une liste de grains
+            </summary>
+            <param name="seeds"> liste de grains</param>
+            <param name="numClass">classe donnée (doit être compris entre -1 et 4) -1 = total, 0 = indéfini, autres = numéro de la classe</param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.Overview.updateOverviewLabel(System.Int32)">
+            <summary>
+            Affiche les criteres de la classe voulue
+            </summary>
+            <param name="numClass">classe voulue</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.Overview.UpdateSize(System.Object,System.EventArgs)">
+            <summary>
+            Adapte la taille des écriture en fonction de la taille du userControl.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:SV360.IHM.Elements.Analyse.Overview.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.Overview.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Analyse.Overview.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.Elements.Analyse.NamespaceDoc">
+            <summary>
+            Le  namespace <see cref="N:SV360.IHM.Elements.Analyse"/> contient les élements qui permettent d'afficher les données relatif à l'analyse tel que:
+            <list type="bullet">
+                <item>le graphisme des parties avec AnalysePartModel</item>
+                <item>le contenant des graphiques histogrammes avec ChartsAnalyse </item>
+                <item>le graphique histogramme 2D avec ChartUsCo</item>
+                <item>le contenant des données globales (répartition des classes, nombre de grains, critere des classes) avec Overview</item>
+                <item> le contenant d'un tableau arber avec les infos avec TreeViewUserControl</item>
+            </list>
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.Elements.ChartPie">
+            <summary>
+            Chartpie est un usercontrol qui permet d'afficher via un graphique en camembert la répartition des classes 
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.ChartPie.#ctor">
+            <summary>
+            Cstor : Instancie les graphismes
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.ChartPie.Set(System.Collections.Generic.List{SV360.Data.Seed})">
+            <summary>
+            Afiche la répartition des classes d'une liste de grains
+            </summary>
+            <param name="seeds">liste de grains</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.ChartPie.SetCountByClass(System.Collections.Generic.List{SV360.Data.Seed},System.Int32)">
+            <summary>
+             renvoi la liste de nombre d'une classe
+            if numclass = -1, fill all the class
+            if numclass != -1, fill in one class and fill others in class
+            </summary>
+            <param name="seeds"></param>
+            <param name="numClass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.IHM.Elements.ChartPie.Set(System.Collections.Generic.List{SV360.Data.Seed},System.Int32)">
+            <summary>
+            Affiche la répartition d'une classe par rapport aux autres d'une liste de grains 
+            </summary>
+            <param name="seeds">liste de grains </param>
+            <param name="numClass">numéro de la classe</param>
+        </member>
+        <member name="F:SV360.IHM.Elements.ChartPie.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.ChartPie.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.ChartPie.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Identificator.isIdentificated">
+            <summary>
+            est autorisé
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Identificator.button_valider_Click(System.Object,System.EventArgs)">
+            <summary>
+            Appuie sur bouton valider : Permet de rentrer dans les settings (id : admin mdp : Vilmorin2016)
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:SV360.IHM.Elements.Identificator.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Identificator.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Identificator.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.IPConfig.#ctor">
+            <summary>
+            Fenetre permettant de changer IP avec laquelle le programme cherchera l'automate
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.IPConfig.button1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Si appuie bouton OK : Sauvegarde de l'ip, ferme la fenetre
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:SV360.IHM.Elements.IPConfig.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.IPConfig.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.IPConfig.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.SeedCounter.#ctor">
+            <summary>
+            Affiche le nombre de grains 
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.SeedCounter.Set(System.Int32)">
+            <summary>
+            Affiche le nombre de grains
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="F:SV360.IHM.Elements.SeedCounter.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <!-- Commentaire XML incorrect pour le membre "M:SV360.IHM.Elements.SeedCounter.Dispose(System.Boolean)" -->
+        <member name="M:SV360.IHM.Elements.SeedCounter.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.Elements.Seuils.CheckClasses">
+            <summary>
+            Classes qui permet d'afficher les criteres choisis par l'utilisateur.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.CheckClasses.#ctor(System.String)">
+            <summary>
+            Cstor : 
+                Affiche le message donnée
+            </summary>
+            <param name="mess">message</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.CheckClasses.Print(System.String)">
+            <summary>
+             Affiche un message dans la fenetre
+            </summary>
+            <param name="mess"></param>
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.CheckClasses.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.CheckClasses.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.CheckClasses.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.Elements.Seuils.Criteria">
+            <summary>
+            Classe de donnée qui permet de structurer un critère. 
+            Un critere est une caractéristiques liés à un comparateur (inférieur ou supérieur) et à une valeur 
+            exemple : ( longueur inférieur à 6)
+            
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.Criteria.value">
+            <summary>
+            Valeur du critere
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.Criteria.feature">
+            <summary>
+            caractéristique du critère
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.Criteria.comp">
+            <summary>
+            Comparateur du critère
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Criteria.#ctor(SV360.IHM.Elements.Seuils.Feature,SV360.IHM.Elements.Seuils.Comp,System.Single)">
+            <summary>
+             Cstor : 
+                Instancie un critère, et ajoute sa caractéristique, son comparateur et sa valeur
+            </summary>
+            <param name="c"></param>
+            <param name="cp"></param>
+            <param name="v"></param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Criteria.ToString">
+            <summary>
+             Renvoi ses données dans un string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Criteria.ToStr(SV360.IHM.Elements.Seuils.Comp)">
+            <summary>
+             renvoi un string en fonction de son élément comparateur
+            </summary>
+            <param name="comp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Criteria.ToStr(SV360.IHM.Elements.Seuils.Feature)">
+            <summary>
+            renvoi un string en fonction de sa caractériques
+            </summary>
+            <param name="crit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Criteria.Respect(SV360.Data.Seed)">
+            <summary>
+             Vérifie si une graine respecte le critère
+            </summary>
+            <param name="s">graine</param>
+            <returns>true si le critere est respecté,  false sinon</returns>
+        </member>
+        <member name="T:SV360.IHM.Elements.Seuils.Comp">
+            <summary>
+            Enumération de l'élément comparateur
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.Comp.inf">
+            <summary>
+            inférieur
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.Comp.sup">
+            <summary>
+            supérieur ou égal
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.Elements.Seuils.Feature">
+            <summary>
+            Enumération des caractéristiques
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.Feature.Width">
+            <summary>
+            largeur
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.Feature.Length">
+            <summary>
+            longueur
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.Feature.Thickness">
+            <summary>
+            épaisseur
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.Elements.Seuils.Threshold">
+            <summary>
+            Threshold est un Usercontrol qui :
+            <list type="bullet">
+            <item>affiche ses données à l'écran  </item>
+            <item>gere ses boutons</item>
+            <item>gere ses données </item>
+            <item>est lié à ses enfants et son parent.</item>
+            </list>
+            Il s'agit d'un noeud d'un arbre.
+            </summary>
+        </member>
+        <member name="E:SV360.IHM.Elements.Seuils.Threshold.ClassesCreated">
+            <summary>
+            Evenement d'une classe créée
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.Threshold.comp">
+            <summary>
+            element comparateur
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.Threshold.sonLeft">
+            <summary>
+            fils droite (supérieur ou égale) et gauche (inférieur)
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.Threshold.sonRight">
+            <summary>
+            fils droite (supérieur ou égale) et gauche (inférieur)
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.Threshold.parent">
+            <summary>
+            parent 
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.Threshold.nbEtages">
+            <summary>
+            nombre d'étages dans l'arbre
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.Threshold.value">
+            <summary>
+             valeur du seuil
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.Threshold.feature">
+            <summary>
+            caractéristiques du seuil
+            </summary>
+        </member>
+        <member name="E:SV360.IHM.Elements.Seuils.Threshold.NextClicked">
+            event next
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.Threshold.criteriasByClass">
+            attribut seulement utilisé par le seuil origine 
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.Threshold.treeIsFill">
+            arbre est rempli
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.Threshold.isAlive">
+            le seuil est en vie
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.#ctor">
+            <summary>
+            Création du seuil origin
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.#ctor(SV360.IHM.Elements.Seuils.Comp,SV360.IHM.Elements.Seuils.Threshold)">
+            <summary>
+            Cstor des seuils non-origines  en fonction d'un parent et de son élément comparateur (corrélé au fils droit ou gauche). Instancie les données graphqiues
+                
+            </summary>
+            <param name="comp">élément comparateur</param>
+            <param name="parent"> parent du seuil</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.RootGetClasses">
+            <summary>
+             le seuil origine retourne la liste des listes des criteres 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.UpdateLanguage">
+            <summary>
+            Update la langue
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.DisplayClass(System.Int32)">
+            <summary>
+            Affiche au lieu des seuils, le numéro de la classe pour les enfants sans enfants
+            </summary>
+            <param name="i">numéro initial des classes</param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.AddCritere(System.Collections.Generic.List{System.Collections.Generic.List{SV360.IHM.Elements.Seuils.Criteria}},System.Int32)">
+            <summary>
+                
+            </summary>
+            <param name="criteres"></param>
+            <param name="idx"> start idx</param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.Brother">
+            <summary>
+            Obtient le frere du seuil
+            </summary>
+            <returns> frere du seuil</returns>
+        </member>
+        <member name="P:SV360.IHM.Elements.Seuils.Threshold.TreeIsFill">
+            <summary>
+            Arbre est rempli (nombre d'étage sup ou egale à 3 ou classe validé par l'utilisateur) ? 
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.Initialize">
+            <summary>
+            Initialise les graphiques
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.AfficheClasse(System.Int32)">
+            <summary>
+            Affiche au lieu des paramètres des seuils la classe 
+            </summary>
+            <param name="a">numéro de la classe</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.Next_Click(System.Object,System.EventArgs)">
+            <summary>
+            Qd bouton suivant appuyé, 
+                Création ou affichage des fils. 
+                Vérification si le nombre de classes possibles est inférieur à 5.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.Root">
+            <summary>
+            Retourne le seuil origine
+            </summary>
+            <returns>seuil origine</returns>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.isCorrectSeuil">
+            vérifier si le seuil selectionné est acceptable ou non
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.VisibleTree(System.Boolean)">
+            <summary>
+            Rend visible ou non le noeud et ses enfants
+            </summary>
+            <param name="OnOff"></param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.UpdateStartBt">
+            <summary>
+            Affichage du premier bouton du seuil 
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.back1">
+            <summary>
+            Update graphique: rend actif les combobox de choix pour l'utilisateur
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.back2">
+            <summary>
+            Update Graphique: rend invisible le tableau de commande du usercontrol
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.UpdateBack">
+            <summary>
+            Update l'arbre en fonction des données dans le usercontrol
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.UpdateBackChild">
+            <summary>
+            Update graphique des enfants
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.CommandVisibility(System.Boolean)">
+            <summary>
+            Rend visible les commandes utilisateur d'un seuil
+            </summary>
+            <param name="OnOff"></param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.CommandVisibilityChild(System.Boolean)">
+            <summary>
+            REnd visible les commandes utilisateurs des enfants
+            </summary>
+            <param name="OnOff"></param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.setCritere(System.String)">
+            <summary>
+            Setcritere en fonction de la combobox rempli par l'utilisateur
+            </summary>
+            <param name="str"></param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.btStart_Click(System.Object,System.EventArgs)">
+            <summary>
+            Appuie sur le premiere bouton pour ouvrir le panneau de commande utilisateur
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.Threshold.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.Threshold.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.Elements.Seuils.GlobalThreshold">
+            <summary>
+            UserControl qui permet d'avoir une IHM pour paramétrer les criteres en fonction d'un arbre de seuil. Chaque seuil va avoir deux enfants et un parent.
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.GlobalThreshold.seuilOrigin">
+            <summary>
+            Seuil origine, le seul sans parent
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.GlobalThreshold.#ctor">
+            <summary>
+            Cstor  :
+                initialise le seuil origine, instancie le tablelayoutpanel qui permettra de gerer la disposition des seuils.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.GlobalThreshold.GetClasses">
+            <summary>
+            Retourne la liste des listes de criteres. 
+            Chaque seuil à une liste de criteres. 
+            La fonction demande aux enfants sans enfant de donner leurs listes, en commencant à droite.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.GlobalThreshold.CreateNewSon(System.Object,System.EventArgs)">
+            <summary> 
+            Click sur un bouton d'un seuil
+            Création de deux nouveaux fils en fonction de ce seuil.
+            Création des données graphiques de ces fils
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.GlobalThreshold.DisplayClasses">
+            <summary>
+             Affiche le résumé de la liste des listes des critères
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.Seuils.GlobalThreshold.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.GlobalThreshold.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.Seuils.GlobalThreshold.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.Elements.Seuils.NamespaceDoc">
+            <summary>
+            Le  namespace <see cref="N:SV360.IHM.Elements.Seuils"/> contient les élements qui permettent d'afficher les données relatif aux choix des seuils réalisé par l'utilisateur. 
+            Il contient:
+            <list type="bullet">
+                <item>L'affichage des criteres choisis dans une fenetre avec CheckClasses</item>
+                <item>La classe de données des criteres avec Criteria </item>
+                <item>Le contenant des différents seuils, leurs dispositions avec globalthresholds</item>
+                <item>Les seuils qui gere les données IHM et le modèle (arbre)</item>
+            </list>
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.Elements.TreeViewUserControl">
+            <summary>
+            Classe qui permet d'afficher les données d'une liste de grains via un arbre
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.TreeViewUserControl.#ctor(System.Collections.Generic.List{SV360.Data.Seed})">
+            <summary>
+            Cstor : 
+                
+            </summary>
+            <param name="seeds"></param>
+        </member>
+        <member name="M:SV360.IHM.Elements.TreeViewUserControl.FillMorphoNode(System.Collections.Generic.IEnumerable{SV360.Data.Seed},SV360.IHM.Elements.TreeViewUserControl.Node)">
+            <summary>
+            Ajoute les données statistiques pour chaque caractéristiques morphologiques
+            </summary>
+            <param name="seeds"></param>
+            <param name="node"></param>
+        </member>
+        <member name="M:SV360.IHM.Elements.TreeViewUserControl.InitializeData(System.Collections.Generic.List{SV360.Data.Seed})">
+            <summary>
+            Initialise les données 
+            </summary>
+            <param name="seeds"></param>
+        </member>
+        <member name="F:SV360.IHM.Elements.TreeViewUserControl.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.TreeViewUserControl.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:SV360.IHM.Elements.TreeViewUserControl.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.Elements.NamespaceDoc">
+            <summary>
+            Le  namespace <see cref="N:SV360.IHM.Elements"/> contient les élements IHM permettant d'afficher et faire fonctionner les interfaces graphiques
+            Il contient :
+            <list type="bullet">
+                <item>Les éléments graphiques pour chaque onglet (Analyser, trier, seuils)</item>
+                <item>Les éléments graphiques d'identification de l'admin, du choix de l'IP automate, etc.</item>
+            </list>
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.Elements.SVButton">
+            <summary>
+            Bouton graphique qui peut etre checked ou non
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.Elements.SVButton.isChecked">
+            <summary>
+            checked ou non
+            </summary>
+        </member>
+        <member name="E:SV360.IHM.Elements.SVButton.Checked">
+            <summary>
+            Evenement de check
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.Elements.SVButton.#ctor">
+            <summary>
+            Cstr : Instancie les graphismes et events
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.MorphoShow">
+            <summary>
+            UserControl permettant d'afficher les données relatif à une graine lors de la phase tri.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.MorphoShow.#ctor">
+            <summary>
+            Cstr : Initialise les graphisme.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.MorphoShow.ShowFeatures(System.Single,System.Single,System.Single)">
+            <summary>
+            Permet d'afficher les données liées à la largeur,l'épaisseur, et la longueur
+            </summary>
+            <param name="width"></param>
+            <param name="thickness"></param>
+            <param name="length"></param>
+        </member>
+        <member name="M:SV360.IHM.MorphoShow.SetCounter(System.Int32)">
+            <summary>
+            affiche le nombre de grains passés
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:SV360.IHM.MorphoShow.SetCounter(System.String)">
+            <summary>
+            affiche le nombre de grains passés
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.MorphoShow.ResetCallback">
+            <summary>
+            Efface toutes les données dans le usercontrol
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.MorphoShow.ShowTime(System.TimeSpan,System.Single)">
+            <summary>
+            Affiche le temps écoulé depuis le dernier grain passé, et le nombre de grains par seconde (mésurée sur les 3 dernieres grains)
+            </summary>
+            <param name="elapsed">temps écoulé</param>
+            <param name="fps">nombre de grains par seconde</param>
+        </member>
+        <member name="M:SV360.IHM.MorphoShow.UpdateSize(System.Object,System.EventArgs)">
+            <summary>
+            Update des tailles des textes en fonction de la taille du usercontrol
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:SV360.IHM.MorphoShow.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.MorphoShow.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:SV360.IHM.MorphoShow.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.PageTab.AnalysisUC">
+            <summary>
+            Classe qui controle l'onglet analyser.
+            L'interface présente les données des graines qui sont analysées pendant la phase de passage des lots.
+            La classe contient : 
+                <list type="bullet">
+                <item>la partie General de chaque classe (Classe Overview)</item>
+                <item>la partie graphiques</item>
+                </list> 
+               
+            </summary>
+        </member>
+        <member name="F:SV360.IHM.PageTab.AnalysisUC.overviewPart">
+            <summary>
+            AnalysePartModel est une surcouche graphique pour présenter les analyses :
+                avec un titre 
+                avec un encadrement
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.PageTab.AnalysisUC.#ctor">
+            <summary>
+            Cstr de l'interface.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.PageTab.AnalysisUC.Set(System.Collections.Generic.List{SV360.Data.Seed},System.Boolean)">
+            <summary>
+            Affiche les données sur l'interface par rapport à une liste de grains et au seuillage entré
+            </summary>
+            <param name="seeds">liste des grains</param>
+            <param name="OnOff">activer l'affichage ou non de l'interface</param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.AnalysisUC.Set(System.Collections.Generic.List{SV360.Data.Seed})">
+            <summary>
+            Instancie les parties de description générale et graphiques 
+            </summary>
+            <param name="seeds">liste de grains</param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.AnalysisUC.Update(System.Int32)">
+            <summary>
+            Update de l'interface 
+            Affiche l'interface par rapport à un numéro de classe donnée.
+            
+            </summary>
+            <param name="numClass">numéro de la classe (doit être compris entre -1 et 4) -1 correspondant à l'ensemble des graines, le reste a des classes de <see cref="T:SV360.Data.Seed.ENumClass"/></param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.AnalysisUC.Enable(System.Boolean)">
+            <summary>
+            active ou non l'interface
+                Si l'interface est non activée. Affichage d'un texte pour informer que l'analyse est impossible.
+            </summary>
+            <param name="OnOff"></param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.AnalysisUC.toolStripBtExcel_Click(System.Object,System.EventArgs)">
+            <summary>
+            Click bouton excel
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.AnalysisUC.SaveExcel(System.Object,System.String)">
+            <summary>
+            Save dans fichier excel
+            </summary>
+            <param name="sender"></param>
+            <param name="path"></param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.AnalysisUC.toolStripButton3_Click(System.Object,System.EventArgs)">
+            <summary>
+            click icone de statistiques
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.AnalysisUC.menuButtonC1_Click(System.Object,System.EventArgs)">
+            <summary>
+            click sur le bouton classe 1
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.AnalysisUC.menuButtonGeneral_Click(System.Object,System.EventArgs)">
+            <summary>
+            click sur bouton general
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.AnalysisUC.menuButtonC2_Click(System.Object,System.EventArgs)">
+            <summary>
+            click sur bouton Classe 2
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.AnalysisUC.menuButtonC3_Click(System.Object,System.EventArgs)">
+            <summary>
+            click sur bouton C3
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.AnalysisUC.CheckSeeds(System.Int32)">
+            <summary>
+            Verifie si la liste de grains en fonction d'un numéro de classe donnée est valide (c-a-d non vide, listes des critères valides)
+            </summary>
+            <param name="numClass">numéro de classe (doit être compris entre 1 et 4 ou -1) </param>
+            <returns></returns>
+        </member>
+        <member name="F:SV360.IHM.PageTab.AnalysisUC.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.PageTab.AnalysisUC.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.AnalysisUC.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.PageTab.SortingUC">
+             <summary>
+             Interface de l'onglet trier
+             L'interface sert à :
+             <list type="bullet">
+            <item>lancer le passage du lot</item>
+            <item>effectuer les anlayses en temps réel</item>
+            <item>afficher les données des grains qui viennent d'être analysée</item>
+             </list>
+             </summary>
+        </member>
+        <member name="E:SV360.IHM.PageTab.SortingUC.PlayClick">
+            <summary>
+            Appui sur bouton Play
+            </summary>
+        </member>
+        <member name="E:SV360.IHM.PageTab.SortingUC.StopClick">
+            <summary>
+            Appui sur bouton Stop
+            </summary>
+        </member>
+        <member name="E:SV360.IHM.PageTab.SortingUC.pauseClick">
+            <summary>
+            Appui  sur le bouton Pause
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.PageTab.SortingUC.ShowFeatures(System.Single,System.Single,System.Single)">
+            <summary>
+             Affiche les données sur la longueur, épaisseur, largeur
+            </summary>
+            <param name="width">largeur</param>
+            <param name="thickness">épaisseur</param>
+            <param name="length">longueur</param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.SortingUC.#ctor">
+            <summary>
+            Cstr:
+                Instancie tout les elements graphiques permettant d'afficher les données sur les grains venant d'être analysés
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.PageTab.SortingUC.tableLayoutPanel1_CellPaint(System.Object,System.Windows.Forms.TableLayoutCellPaintEventArgs)">
+            <summary>
+            Dessine le cadre
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.SortingUC.SetLabel(System.String)">
+            <summary>
+            Affiche  un message dans un label visible par l'utilisateur situé en dessous de la barre de mise en route (play, stop, pause)
+            </summary>
+            <param name="mess"></param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.SortingUC.SetSpinner(System.Boolean)">
+            <summary>
+            Active le spinner, le cercle tournant qui indique que le processus est lancé
+            </summary>
+            <param name="OnOff"></param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.SortingUC.InitLayout">
+            <summary>
+            Initilise l'interface
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.PageTab.SortingUC.ResetValues">
+            <summary>
+            Mets les valeurs des graphes à zéro.
+            Counter = #Seed
+            ChartPie=0
+            
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.PageTab.SortingUC.ResetShowAllLayout">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.PageTab.SortingUC.StartState">
+            <summary>
+            Update de l'interface quand le processus est démarré
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.PageTab.SortingUC.PauseState">
+            <summary>
+            Update de l'interface quand le processus est en pause
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.PageTab.SortingUC.StopState">
+            <summary>
+            Update de l'interface quand le processus est arrété
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.PageTab.SortingUC.DisplayAcquisition(Emgu.CV.Image{Emgu.CV.Structure.Rgb,System.Byte})">
+            <summary>
+            Affiche une image dans imageBox de l'interface
+            </summary>
+            <param name="image"></param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.SortingUC.ClearAcquisition">
+            <summary>
+            Efface l'image de l'interface
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.PageTab.SortingUC.SetCounter(System.Int32)">
+            <summary>
+            Affiche un nombre dans la partie correspondant au nombre de grains analysé
+            </summary>
+            <param name="count">nmobre</param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.SortingUC.SetCounter(System.String)">
+            <summary>
+            Affiche un message dans la partie correspondant au nombre de grains analysé
+            </summary>
+            <param name="str">message</param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.SortingUC.ShowTime(System.TimeSpan,System.Single)">
+            <summary>
+            Affiche le temps de passage du dernier grain dans l'interface
+            </summary>
+            <param name="elapsed"></param>
+            <param name="fps"></param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.SortingUC.SetChartPie(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Affiche les données de répartition des classes dans un chartpie
+            </summary>
+            <param name="countByClass">liste du nombre de grains par classe</param>
+        </member>
+        <member name="F:SV360.IHM.PageTab.SortingUC.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.PageTab.SortingUC.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.SortingUC.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.PageTab.NamespaceDoc">
+            <summary>
+            Le  namespace <see cref="N:SV360.IHM.PageTab"/> contient les onglets utilisé dans l'interface homme machine : 
+            <list type="bullet">
+            <item>Seuillage</item>
+            <item>Trier</item>
+            <item>Analyser</item>
+            </list> 
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.PageTab.ThresholdingUC">
+            <summary>
+            Onglet de seuillage :
+                Utilisé pour paramétrer les seuils (en largeur, longueur, épaisseur) que la machine separera pendant le tri
+            </summary>
+        </member>
+        <member name="E:SV360.IHM.PageTab.ThresholdingUC.nextClicked">
+            <summary>
+            Appui sur bouton suivant
+            </summary>
+        </member>
+        <member name="E:SV360.IHM.PageTab.ThresholdingUC.classValidated">
+            <summary>
+            Event que les classes sont validées.
+                Declenché lorsque le nombre de classe est de 4 ou le paramétrage fini
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.PageTab.ThresholdingUC.#ctor">
+            <summary>
+            Cstor : 
+                Instancie les éléments graphiques et l'element qui réalisera le paramétrage (globalThreshold)
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.PageTab.ThresholdingUC.DisplayResult(System.Collections.Generic.List{System.Collections.Generic.List{SV360.IHM.Elements.Seuils.Criteria}})">
+            <summary>
+            Affiche une fenetre pour récapituler les critères choisis
+            </summary>
+            <param name="criterias"></param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.ThresholdingUC.buttonNext_Click(System.Object,System.EventArgs)">
+            <summary>
+             Qd click sur sauvegarder classes
+                ouvre une fenetre pour afficher les résultats.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:SV360.IHM.PageTab.ThresholdingUC.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.PageTab.ThresholdingUC.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:SV360.IHM.PageTab.ThresholdingUC.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.SettingsForm">
+            <summary>
+            Interface qui permet de controler les actionneurs séparemment de l'execution du process logiciel.
+            (Utilisé pour du debug)
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.SettingsForm.#ctor(SV360.Automatism.SystemController)">
+            <summary>
+            Cstor:
+                Set le systemController pour permettre de dialoguer avec l'automate
+            </summary>
+            <param name="sc">systemcontroller pour controler l'automate</param>
+        </member>
+        <member name="M:SV360.IHM.SettingsForm.Vibrator_Click(System.Object,System.EventArgs)">
+            <summary>
+            active le vibrateur
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SV360.IHM.SettingsForm.ButtonAutoClass_Click(System.Object,System.EventArgs)">
+            <summary>
+            Envoi la classe 2 dans la file des prochaines sorties de l'automate 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SV360.IHM.SettingsForm.Update">
+            <summary>
+            Update de l'interface
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.SettingsForm.Conveyor_Click(System.Object,System.EventArgs)">
+            <summary>
+            Arrete ou demarre le convoyeur
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:SV360.IHM.SettingsForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.SettingsForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SV360.IHM.SettingsForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.NamespaceDoc">
+            <summary>
+            Le  namespace <see cref="N:SV360.IHM"/> contient les élements propre à l'interface homme machine :
+            <list type="bullet">
+                <item>la fenetre principale</item>
+                <item>la fenetre de parametrage</item>
+                <item>les usercontrol liées au onglet (seuillage, trier, analyser)</item>
+                <item>les divers elements liées à l'affichage</item>
+            </list>
+            </summary>
+        </member>
+        <member name="T:SV360.IHM.MainForm">
+            <summary>
+            Fenetre principale du logiciel contenant les onglets : 
+            <list type="bulet"> <item>
+                                - seuillage 
+             </item><item>      - trier 
+              </item><item>     - analyser
+              </item>
+              </list>
+            La classe gere les modifications a apporter à la fenetre lorsqu'il y a des events (exemple: Stopsorting, Resize, etc.)
+            
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.MainForm.#ctor">
+            <summary>
+            Cstor de la fenetre principale :
+                - Charge les ressources de langue
+                - Charge les onglets et les events
+                - Construit l'objet de SV360Controller 
+                - Gere le chronomètre 
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.MainForm.PauseSorting(System.Object,System.EventArgs)">
+            <summary>
+            Action of pauseclick event
+                Lance le processus d'analyse visible dans l'onglet analyse
+                Stop le temps d'execution
+                Affiche en pause..
+                Update l'onglet trier
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SV360.IHM.MainForm.StartSorting(System.Object,System.EventArgs)">
+            <summary>
+            Action of startclick event :
+            
+                si le logiciel n'est pas en pause.
+                    Clear les acquisitions de l'onglet trier
+                    Creer une nouvelle liste de seed
+                    Lance la prise d'images de fonds
+               
+                Lance le chronomètre
+                Reset les compteurs de l'automate
+                Lance le run des actionneurs 
+                Update de l'interface
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SV360.IHM.MainForm.StopSorting(System.Object,System.EventArgs)">
+            <summary>
+            Action of stop sorting click:
+                Lance le processus d'analyse visible dans l'onglet analyse
+                Stop les actionneurs
+                Stop le chrono
+                Update l'interface
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:SV360.IHM.MainForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SV360.IHM.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SV360.IHM.MainForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:SV360.Image_Processing.NamespaceDoc">
+            <summary>
+            Le  namespace <see cref="N:SV360.Image_Processing"/> contient les classes pour permettre d'effectuer les calculs sur un grains pour mettre à jour ses données. 
+            Il contient les processsings de :
+            <list type="bullet">    
+                <item>Detection Haploid</item>
+                <item>Extraction données morphologiques</item>
+            </list>
+            </summary>
+        </member>
+        <member name="T:SV360.Image_Processing.HaploidIP">
+            <summary>
+            Classes qui pourrait utilisé pour la detection d'haploid
+            </summary>
+        </member>
+        <member name="T:SV360.Image_Processing.ImageProcessing">
+            <summary>
+            Classe asbtraite pour définir les processing des images
+            </summary>
+        </member>
+        <member name="M:SV360.Image_Processing.ImageProcessing.process(SV360.Data.Seed)">
+            <summary>
+            Méthode permettant d'effectuer un processing en fonction d'une graine.
+            </summary>
+            <param name="s">graine</param>
+            <returns>true si réussi, false sinon</returns>
+        </member>
+        <member name="T:SV360.Image_Processing.MorphoIP">
+            <summary>
+            Classe permettant d'extraire toute les données morphologiques grace à une graine. 
+            </summary>
+        </member>
+        <member name="F:SV360.Image_Processing.MorphoIP.nb">
+            <summary>
+            non utilisé
+            </summary>
+        </member>
+        <member name="M:SV360.Image_Processing.MorphoIP.process(SV360.Data.Seed)">
+            <summary>
+            Met à jour les paramètres morphologiques d'une graine, en utilisant ses vues (views) 
+            Le process doit être utilisé après un pre process
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Image_Processing.MorphoIP.DecisionMaking(SV360.Data.Seed)">
+            <summary>
+            Met à jour la classe de la graine en fonction du choix de seuillage fait par l'utilisateur
+            </summary>
+            <param name="s"></param>
+        </member>
+        <member name="M:SV360.Image_Processing.MorphoIP.RotatingCaliper(Emgu.CV.Seq{System.Drawing.Point})">
+            <summary>
+            Algo du pied à coulisse rotatif grace à une forme englobante
+            </summary>
+            <param name="convexHull">forme englobante</param>
+            <returns>vector[0] = minLength, vector[1] = maxLength</returns>
+        </member>
+        <member name="M:SV360.Image_Processing.MorphoIP.rotCaliper(Emgu.CV.Seq{System.Drawing.Point},System.Double@,System.Double@)">
+            <summary>
+            Calcule la longueur et largeur d'une forme avec l'algo rotating caliper
+            </summary>
+            <param name="convexHull">forme englobante</param>
+            <param name="_height">longueur</param>
+            <param name="_width">largeur</param>
+        </member>
+        <member name="M:SV360.Image_Processing.MorphoIP.idExtremePoint(Emgu.CV.Seq{System.Drawing.Point})">
+            <summary>
+            Recherche des points le plus haut et le plus bas pour commencer le rotating caliper
+            </summary>
+            <param name="convexHull"></param>
+            <returns>int[0]= le plus haut, idx[1]=le plus bas</returns>
+        </member>
+        <member name="T:SV360.Preprocessing.NamespaceDoc">
+            <summary>
+            Le  namespace <see cref="N:SV360.Preprocessing"/> contient les classes qui permet de réaliser le preprocessing, c'est-à-dire la segmentation et le cropping en instanciant une liste de vues (views) des grains. 
+            Le deux processing sont celui de la vision globale avec 4 vues, celui du convoyeur avec 2 vues (tapis + mirroir)
+            </summary>
+        </member>
+        <member name="T:SV360.Preprocessing.ConvoyeurPP">
+            <summary>
+            Preprocessing dédié au convoyeur à bande bleu
+            </summary>
+        </member>
+        <member name="F:SV360.Preprocessing.ConvoyeurPP.imBg">
+            <summary>
+            image background
+            </summary>
+        </member>
+        <member name="F:SV360.Preprocessing.ConvoyeurPP.nbBg">
+            <summary>
+            nombre d'images pour faire le background
+            </summary>
+        </member>
+        <member name="P:SV360.Preprocessing.ConvoyeurPP.ImBg">
+            <summary>
+            Image background
+            </summary>
+        </member>
+        <member name="M:SV360.Preprocessing.ConvoyeurPP.AddBg(Emgu.CV.Image{Emgu.CV.Structure.Rgb,System.Byte})">
+            <summary>
+            Ajoute une image à l'image background en faisant une moyenne
+            </summary>
+            <param name="bg"></param>
+        </member>
+        <member name="M:SV360.Preprocessing.ConvoyeurPP.preprocessing(SV360.Data.Acquisition)">
+            <summary>
+            Réalise le preprocessing (segmentation, cropping) d'une acquisition
+            </summary>
+            <param name="acquisition">acquisition</param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Preprocessing.ConvoyeurPP.Segmentation(Emgu.CV.Image{Emgu.CV.Structure.Rgb,System.Byte},Emgu.CV.Image{Emgu.CV.Structure.Rgb,System.Byte},System.Drawing.Rectangle,System.Drawing.Rectangle)">
+            <summary>
+            Segmentation miroir et bande
+            </summary>
+            <param name="imSrc"></param>
+            <param name="imBg"></param>
+            <param name="roiMirror"></param>
+            <param name="roiBelt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Preprocessing.ConvoyeurPP.SegBelt(Emgu.CV.Image{Emgu.CV.Structure.Rgb,System.Byte},Emgu.CV.Image{Emgu.CV.Structure.Rgb,System.Byte})">
+            <summary>
+            segmentation sur bande
+            </summary>
+            <param name="imSrc"></param>
+            <param name="imBg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Preprocessing.ConvoyeurPP.SegMirror(Emgu.CV.Image{Emgu.CV.Structure.Rgb,System.Byte},Emgu.CV.Image{Emgu.CV.Structure.Rgb,System.Byte})">
+            <summary>
+            segmentation sur miroir
+            </summary>
+            <param name="imSrc"></param>
+            <param name="imBg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Preprocessing.ConvoyeurPP.HasRectInImage(System.Drawing.Rectangle,System.Drawing.Size)">
+            <summary>
+            Vérifie si le rectangle est à l'intérieur d'une fenetre (size)
+            </summary>
+            <param name="rInside">rectangle</param>
+            <param name="size">fenetre</param>
+            <returns></returns>
+        </member>
+        <member name="T:SV360.Preprocessing.GlobalVisionPP">
+            <summary>
+            Pre Processing for Global Vision, when seeds fall in the TCCAGE
+            </summary>
+        </member>
+        <member name="F:SV360.Preprocessing.GlobalVisionPP.imBg">
+            <summary>
+            Background Image
+            </summary>
+        </member>
+        <member name="T:SV360.Preprocessing.Preprocessing">
+            <summary>
+            Classe permettant de faire la segmentation et le cropping des vues 
+            </summary>
+        </member>
+        <member name="M:SV360.Preprocessing.Preprocessing.preprocessing(SV360.Data.Acquisition)">
+            <summary>
+            preprocessing:
+            
+            segmentation of seeds
+            cropping of views
+            </summary>
+            <param name="acquisition">acquisition d'une image</param>
+            <returns> true if succeeded, false if not</returns>
+        </member>
+        <member name="T:SV360.Resources.lang.Lang">
+            <summary>
+            Classe permettant de traduire de l'anglais ou français à l'aide de fichier .resx
+            Chaque texte doit avoir deux références: une anglaise une francaise dans les fichiers .resx pour pouvoir effectuer la traduction pendnat l'execution du programme
+            </summary>
+        </member>
+        <member name="P:SV360.Resources.lang.Lang.CI">
+            <summary>
+            Getter Setter de la langue
+            </summary>
+        </member>
+        <member name="P:SV360.Resources.lang.Lang.ResMan">
+            <summary>
+            Getter et setter du manager de ressources
+            </summary>
+        </member>
+        <member name="M:SV360.Resources.lang.Lang.Text(System.String)">
+            <summary>
+            Ecriture d'un texte en anglais ou francais dépendant des fichiers .resx. 
+            La méthode recherche si le texte es présent dans les fichiers .resx. 
+            Si oui, il renvoie en fonction de la cultureInfo un texte français ou anglais
+            </summary>
+            <param name="txt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SV360.Resources.lang.NamespaceDoc">
+            <summary>
+            Le  namespace <see cref="N:SV360.Resources.lang"/> contient les ressources qui permettent de traduire le language du logiciel pendant son execution. 
+            </summary>
+        </member>
+        <member name="T:SV360.Resources.SVColor">
+            <summary>
+            Couleur modèle pour le logiciel
+            </summary>
+        </member>
+        <member name="T:SV360.Resources.NamespaceDoc">
+            <summary>
+            Le  namespace <see cref="N:SV360.Resources"/> contient les ressources qui permettent d'améliorer le graphisme avec: 
+            <list type="bullet">    
+                <item>des images</item>
+                <item>des références couleurs</item>
+            </list>
+            </summary>
+        </member>
+        <member name="T:SV360.SV360Controller">
+            <summary>
+            Classe qui permet de manager et controler les processus liés aux logociels et à la machine (automate, caméra)
+            </summary>
+        </member>
+        <member name="F:SV360.SV360Controller.sc">
+            <summary>
+            Permet de manager l'automate
+            </summary>
+        </member>
+        <member name="F:SV360.SV360Controller.seeds">
+            <summary>
+            liste de grains 
+            </summary>
+        </member>
+        <member name="M:SV360.SV360Controller.#ctor">
+            <summary>
+            Cstor : Initialise le systemcontroller permettant de piloter l'automate, les preprocessings, les processings, la caméra, les events
+            </summary>
+        </member>
+        <member name="M:SV360.SV360Controller.InitAcq">
+            <summary>
+            Instancie les preprocessing, remise à zéro
+            </summary>
+        </member>
+        <member name="M:SV360.SV360Controller.TakeAcquisitionBackground">
+            <summary>
+            Demande au systemController de commencer l'acquisition des images de fonds
+            </summary>
+        </member>
+        <member name="M:SV360.SV360Controller.ActivateConstantEjection">
+            <summary>
+            Regarde si le seuillage a plus d'une classe sinon renvoyer tout les grains dans le bac 1 (à droite)
+            </summary>
+            <returns>Ejection activée? oui ou non</returns>
+        </member>
+        <member name="M:SV360.SV360Controller.IDSAcquisitionNotified(System.Object,System.EventArgs)">
+            <summary>
+            Event de l'acquisition d'une image par la caméra IDS : 
+                Lors de cet events seront faits : 
+                <list type="bullet">
+                <item>les calculs preprocessings,</item>
+                <item>les calculs processings</item>
+                <item>la classification en classes en fonction du choix utilisateur</item>
+                <item>l'affichage des données</item>
+                <item>le calcul de temps entre les grains</item>
+            </list>" 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SV360.SV360Controller.Finalize">
+            <summary>
+            Dstor : 
+               Fermeture du systemcontroller
+            </summary>
+        </member>
+        <member name="T:SV360.Utils.ExcelController">
+            <summary>
+            Classe permettant d'exporter les données dans un fichier Excel. 
+            La classe s'occupe de l'écriture et de la mise en forme du fichier excel
+            </summary>
+        </member>
+        <member name="M:SV360.Utils.ExcelController.Read(System.String)">
+            <summary>
+            Lecture d'un fichier
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SV360.Utils.ExcelController.SheetCat">
+            <summary>
+            Différente catégorie de feuille
+            </summary>
+        </member>
+        <member name="F:SV360.Utils.ExcelController.SheetCat.General">
+            <summary>
+            feuille générale
+            </summary>
+        </member>
+        <member name="F:SV360.Utils.ExcelController.SheetCat.C1">
+            <summary>
+            feuille classe 1
+            </summary>
+        </member>
+        <member name="F:SV360.Utils.ExcelController.SheetCat.C2">
+            <summary>
+            feuille classe 2
+            </summary>
+        </member>
+        <member name="F:SV360.Utils.ExcelController.SheetCat.C3">
+            <summary>
+            feuille classe 3
+            </summary>
+        </member>
+        <member name="F:SV360.Utils.ExcelController.SheetCat.C4">
+            <summary>
+            feuille classe 4
+            </summary>
+        </member>
+        <member name="M:SV360.Utils.ExcelController.Write(System.Collections.Generic.List{SV360.Data.Seed},System.String)">
+            <summary>
+            Ecrit dans un fichier, les données relative à la morphologie d'une liste de grains
+            </summary>
+            <param name="seeds">liste de grains</param>
+            <param name="path">chemin du fichier</param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Utils.ExcelController.CalculateInfoClass(System.Collections.Generic.List{System.Collections.Generic.List{SV360.IHM.Elements.Seuils.Criteria}},System.Collections.Generic.List{SV360.Data.Seed})">
+            <summary>
+            Calcule les infos sur les classes pour l'affichage dans le fichier excel
+            </summary>
+            <param name="criterias"></param>
+            <param name="seeds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Utils.ExcelController.WriteHeader(OfficeOpenXml.ExcelWorksheet,SV360.Utils.ExcelController.SheetCat,System.Int32,System.Collections.Generic.List{SV360.Utils.ExcelController.InfoClass})">
+            <summary>
+            Ecriture  de l'entete des fichiers 
+            </summary>
+            <param name="ws"></param>
+            <param name="cat"></param>
+            <param name="nbSeeds"></param>
+            <param name="infoClass"></param>
+        </member>
+        <member name="M:SV360.Utils.ExcelController.BorderThin(OfficeOpenXml.ExcelRange)">
+            <summary>
+            Mise en page : 
+            Création d'un bord fin autour d'une zone
+            </summary>
+            <param name="cells">zone</param>
+        </member>
+        <member name="M:SV360.Utils.ExcelController.BorderMedium(OfficeOpenXml.ExcelRange)">
+            <summary>
+            Mise en page : 
+            Création d'un bord moyen autour d'une zone
+            </summary>
+            <param name="cells">zone</param>
+        </member>
+        <member name="M:SV360.Utils.ExcelController.FormatTitle(OfficeOpenXml.ExcelRange)">
+            <summary>
+            Mise en page :
+            Couleurs des titres
+            </summary>
+            <param name="cells"></param>
+        </member>
+        <member name="M:SV360.Utils.ExcelController.WriteStats(OfficeOpenXml.ExcelWorksheet,System.Collections.Generic.List{SV360.Data.Seed})">
+            <summary>
+            Ecriture des statistiques des données d'une liste de seed. Créé 3 graphiques histogramme pour chaque caractéristique morphologique, écrit les détails des données de la liste de grains
+            </summary>
+            <param name="ws"></param>
+            <param name="seeds"></param>
+        </member>
+        <member name="M:SV360.Utils.ExcelController.GetExcelColumnName(System.Int32)">
+            <summary>
+            Converti la position colonne d'un nombre en une suite de lettre
+            </summary>
+            <param name="columnNumber">numéro de colonne</param>
+            <returns>colonne en lettre</returns>
+        </member>
+        <member name="T:SV360.Utils.HaploidUtils">
+            <summary>
+            "HaploidUtils" is a static class where utils function were developped to make Haploid image processing function easier to read.
+            </summary>
+        </member>
+        <member name="M:SV360.Utils.HaploidUtils.imhist(Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte})">
+            <summary>
+            This function computes the image histogramm, accordingly to its mask. 
+            </summary>
+            <param name="im"></param>
+            <param name="mask"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Utils.HaploidUtils.SmoothHistogram(Emgu.CV.DenseHistogram,System.UInt32)">
+            <summary>
+            This function smouthes the histogram based on AR linear filter.
+            </summary>
+            <param name="hist"></param>
+            <param name="SmoothFilterOrder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Utils.HaploidUtils.DatafromHistogram(Emgu.CV.DenseHistogram)">
+            <summary>
+            This function makes a list of data generated from a histogram.
+            </summary>
+            <param name="hist"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Utils.HaploidUtils.DatafromHistogram2(Emgu.CV.DenseHistogram)">
+            <summary>
+            This function makes a list of data generated from a histogram. The return format makes it to be used by Gaussian Mixture Model functions in "Accord.MachineLearning".
+            </summary>
+            <param name="hist"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Utils.HaploidUtils.sort``1(``0[])">
+            <summary>
+            This function sorts from lower values to higher values and returns the index of each values sorted.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Utils.HaploidUtils.GermeDetection(Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},System.Single,System.Int32,System.UInt32)">
+            <summary>
+            Germe detection based on diploid seeds detection and their kernel. It returns the germe center.
+            </summary>
+            <param name="im"></param>
+            <param name="mask"></param>
+            <param name="epsilon_conv"></param>
+            <param name="Kg"></param>
+            <param name="filterOrder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Utils.HaploidUtils.FeaturesExtraction(Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},System.Single,System.Int32,System.UInt32)">
+            <summary>
+            This function extracts features from Gaussian Mixture Model.
+            </summary>
+            <param name="im"></param>
+            <param name="mask"></param>
+            <param name="epsilon_conv"></param>
+            <param name="Kmog"></param>
+            <param name="filterOrder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SV360.Utils.StatsItem">
+            <summary>
+            Classe permettant de regrouper les données liées aux statistiques d'une liste
+            </summary>
+        </member>
+        <member name="P:SV360.Utils.StatsItem.average">
+            Item average
+        </member>
+        <member name="P:SV360.Utils.StatsItem.max">
+            Item max
+        </member>
+        <member name="P:SV360.Utils.StatsItem.min">
+            Item min
+        </member>
+        <member name="P:SV360.Utils.StatsItem.stdDeviation">
+            Item standard deviation
+        </member>
+        <member name="P:SV360.Utils.StatsItem.counter">
+            Item conuter
+        </member>
+        <member name="F:SV360.Utils.StatsItem.sum">
+            Buffers
+        </member>
+        <member name="M:SV360.Utils.StatsItem.#ctor">
+            <summary>
+            Cstr: 
+            Instancie et mets les données stats à 0
+            </summary>
+        </member>
+        <member name="M:SV360.Utils.StatsItem.Compute(System.Double)">
+            Calculate statistics online
+        </member>
+        <member name="M:SV360.Utils.StatsItem.ToString">
+            <summary>
+            Renvoi les données statistiques dans un  string
+            </summary>
+            <returns>données statistiques</returns>
+        </member>
+        <member name="T:SV360.Utils._2D">
+            <summary>
+            Classe permettant d'effectuer des calculs sur un plan 2D, avec des fonctions sur les vecteurs, des fonctions trigonométriques.
+            </summary>
+        </member>
+        <member name="M:SV360.Utils._2D.length2P(System.Drawing.PointF,System.Drawing.PointF)">
+            <summary>
+            Longueur entre deux points
+            </summary>
+            <param name="p1"></param>
+            <param name="p2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Utils._2D.rotate(System.Numerics.Vector2,System.Double)">
+            <summary>
+            Rotation d'un vecteur en fonction d'un angle en rad
+            </summary>
+            <param name="v"></param>
+            <param name="angleRad"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Utils._2D.angleRad(System.Numerics.Vector2,System.Numerics.Vector2)">
+            <summary>
+            Angle entre deux vecteurs
+            </summary>
+            <param name="v1"></param>
+            <param name="v2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Utils._2D.DistancePointToSegment(System.Drawing.PointF,System.Drawing.PointF,System.Numerics.Vector2,System.Drawing.PointF@)">
+            <summary>
+            Distance entre un point pt et un segment d'origine p1 de direction vect
+            </summary>
+            <param name="pt"></param>
+            <param name="p1"></param>
+            <param name="vect"></param>
+            <param name="closest">point le plus proche de pt appartenant au segment</param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Utils._2D.DistancePointToVector(System.Drawing.PointF,System.Drawing.PointF,System.Numerics.Vector2)">
+            <summary>
+            Distance entre un point pt et un segment d'origine p1 de direction vect
+            </summary>
+            <param name="pt"></param>
+            <param name="p1"></param>
+            <param name="vect"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SV360.Utils._2D.DistancePointToVector(System.Drawing.PointF,System.Drawing.PointF,System.Numerics.Vector2,System.Drawing.Point@)">
+            <summary>
+             Calculate distance between one point and one vector.
+              And Returns the point of intersection
+            </summary>
+            <param name="pt"> point</param>
+            <param name="p1"> origin vector</param>
+            <param name="vect"> vector</param>
+            <param name="pClosest">intersect point of distance point/vector</param>
+            <returns> distance in pixel between point and vector </returns>
+        </member>
+        <member name="T:SV360.Utils.ListExtra">
+            <summary>
+            Classe permettant de réaliser des méthodes sur les listes : 
+             <list type="bullet">
+             <item>inversement de deux valeur dans la liste</item>
+             <item>calcul de l'écart type dans une liste</item>
+             </list>
+            </summary>
+        </member>
+        <member name="M:SV360.Utils.ListExtra.Swap``1(System.Collections.Generic.List{``0},System.Int32,System.Int32)">
+            <summary>
+            Inverse deux valeurs dans une liste 
+            </summary>
+            <typeparam name="T">Type de la liste</typeparam>
+            <param name="list">liste</param>
+            <param name="index1">indice de la première valeur</param>
+            <param name="index2">indice de la seconde valeur</param>
+        </member>
+        <member name="M:SV360.Utils.ListExtra.StdDev``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Double})">
+            <summary>
+            Calcul l'écart type d'une liste
+            </summary>
+            <typeparam name="T">type de la liste </typeparam>
+            <param name="list">liste</param>
+            <param name="values">attribut à utiliser pour calculer l'écart type</param>
+            <returns>écart type</returns>
+        </member>
+        <member name="T:SV360.Utils.NamespaceDoc">
+            <summary>
+            Le  namespace <see cref="N:SV360.Utils"/> contient les classes qui sont des outils pour piloter le logiciel ou aider au process : 
+            <list type="bullet">    
+                <item>Les opérations faite sur vecteur ou en 2D avec 2D.cs</item>
+                <item>Les statistiques d'un lot avec StatsItem</item>
+                <item>Une classe permettant de piloter un excel, effectuer sa mise en page, ecrire les données à l'intérieur avec ExcelController</item>
+                <item>Une classe permettant d'utiliser les exceptions avec Exception</item>
+                <item>Une classe permettant de réaliser les algorithmes du processing Haploid mais qui pourrait être utilisé par d'autres processings</item>
+            </list>
+            </summary>
+        </member>
+        <member name="T:SV360.Exception">
+            <summary>
+            Calsse qui permet de gerer les exceptions afin de les enregistrer dans un fichier log.
+            </summary>
+        </member>
+        <member name="M:SV360.Exception.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Crée une exception. Cette exception va écrire les détails de l'exception dans le fichier Directory.GetCurrentDirectory() + @"\SV360_log.txt".
+            Cette exception peut aussi afficher un message à l'utilisateur pour le prévenir de l'erreur
+            </summary>
+            <param name="message">message écrit dans le fichier log ou afficher à l'utilisateur si messBox==null ET messageBox=true</param>
+            <param name="messageBox">affichage du message à l'utilisateur</param>
+            <param name="messBox">message destiné à l'utilisateur</param>
+        </member>
+        <member name="M:SV360.Exception.LogMessage(System.String,System.Boolean,System.String)">
+            <summary>
+            Permet d'écrire dans le ficher log sans lancer une exception dans le fichier Directory.GetCurrentDirectory() + @"\SV360_log.txt".
+            Peut aussi afficher un message à l'utilisateur pour le prévenir de l'erreur
+            </summary>
+            <param name="message">message écrit dans le fichier log ou afficher à l'utilisateur si messBox==null ET messageBox=true</param>
+            <param name="messageBox">affichage du message à l'utilisateur</param>
+            <param name="messBox">message destiné à l'utilisateur</param>
+        </member>
+        <member name="F:SV360.Program.mainForm">
+            <summary>
+            Point d'entrée principal de l'application.
+            </summary>
+            
+        </member>
+        <member name="T:SV360.NamespaceDoc">
+            <summary>
+            Le logiciel SV360 est destiné aux utilisateurs de la machine SV360. 
+            L’outil SV360 est un système de détection et d’analyse de particules en mouvement par vision artificielle dans le but de faire un tri automatisé des semences.
+            Il s’agit donc d’extraire des données morphologiques et des informations colorimétriques en temps réel.Le système choisi comporte : 
+            <list type="bullet">
+            <item>Un mécanisme introducteur qui permet le défilement et séparation des semences,</item>
+            <item>Un système de capteurs optiques capable de faire des prises d'images des grains de mais sur convoyeur et en chute libre,</item>
+            <item>Un système d'éjection par vérins. </item>
+            </list> 
+            
+            Le logiciel permet de :
+             <list type="bullet">
+            <item>paramétrer et communiquer avec l'outil SV360, </item>
+            <item>de réaliser les taches de traitements d'images,</item>
+            <item>analyser interpreter et exporter les données issues du traitement d'images</item>
+            </list> 
+            </summary>
+        </member>
+        <member name="T:SV360.Properties.Resources">
+            <summary>
+              Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.ResourceManager">
+            <summary>
+              Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.Culture">
+            <summary>
+              Remplace la propriété CurrentUICulture du thread actuel pour toutes
+              les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.btn_learn">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.btn_start">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.btn_start_excel">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.btn_start_save">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.btn_start_sorting">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.btn_stop">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.btn_stop_excel">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.btn_stop_learn">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.btn_stop_save">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.btn_stop_sorting">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.cancel">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.cross">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.english_flag">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.french_flag">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.list_icon">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.pause_button">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.pause_circular_button">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.pause_circular_button_disabled">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.pause_two_lines">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.play_button">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.play_button_blue">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.play_button_disabled">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.play_button_green">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.play_icon">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.seedcounter">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.stop">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.stop_disabled">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SV360.Properties.Resources.tick">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>

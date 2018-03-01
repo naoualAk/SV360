@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1ED7C52D-C377-43E6-BEED-82E4EE8B9A0E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SV360</RootNamespace>
+    <AssemblyName>SV360</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>Documentations SV360.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>Documentations SV360.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo sv360.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SV360.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord, Version=3.0.2.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.3.0.2\lib\net45\Accord.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accord.MachineLearning, Version=3.0.2.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.MachineLearning.3.0.2\lib\net45\Accord.MachineLearning.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accord.Math, Version=3.0.2.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Math.3.0.2\lib\net45\Accord.Math.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accord.Statistics, Version=3.0.2.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Statistics.3.0.2\lib\net45\Accord.Statistics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge">
+      <HintPath>..\..\..\..\..\..\..\SV360\dll\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Genetic">
+      <HintPath>..\..\..\..\..\..\..\SV360\dll\AForge.Genetic.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>..\..\..\..\..\..\..\SV360\dll\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Neuro">
+      <HintPath>..\..\..\..\..\..\..\SV360\dll\AForge.Neuro.dll</HintPath>
+    </Reference>
+    <Reference Include="CPro.NET">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Teledyne DALSA\Sapera Processing\Bin\Ms.net\CPro.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CProBarcode.NET">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Teledyne DALSA\Sapera Processing\Bin\Ms.net\CProBarcode.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CProBlob.NET">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Teledyne DALSA\Sapera Processing\Bin\Ms.net\CProBlob.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CProCalib.NET">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Teledyne DALSA\Sapera Processing\Bin\Ms.net\CProCalib.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CProColor.NET">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Teledyne DALSA\Sapera Processing\Bin\Ms.net\CProColor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CProMeasurement.NET">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Teledyne DALSA\Sapera Processing\Bin\Ms.net\CProMeasurement.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CProOcr.NET">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Teledyne DALSA\Sapera Processing\Bin\Ms.net\CProOcr.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CProSearch.NET">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Teledyne DALSA\Sapera Processing\Bin\Ms.net\CProSearch.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="DALSA.SaperaLT.SapClassBasic">
+      <HintPath>..\..\..\..\..\..\..\SV360\dll\DALSA.SaperaLT.SapClassBasic.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV, Version=2.4.10.1939, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windows-universal 2.4.10.1940\bin\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI, Version=2.4.10.1939, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windows-universal 2.4.10.1940\bin\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.Util, Version=2.4.10.1939, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windows-universal 2.4.10.1940\bin\Emgu.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.1.0\lib\net40\EPPlus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Jai_FactoryDotNET">
+      <HintPath>C:\Program Files\JAI\SDK\bin\Jai_FactoryDotNET.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=3.11.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.3.11.1\lib\net40\MathNet.Numerics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\..\..\..\..\..\SV360\dll\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\..\..\..\..\..\..\SV360\dll\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\..\..\..\..\..\..\SV360\dll\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>P:\Damien\Programmation\dll\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="ModbusTCP">
+      <HintPath>..\..\..\..\..\..\..\SV360\dll\ModbusTCP.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <HintPath>..\packages\ObjectListView.Official.2.9.1\lib\net20\ObjectListView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="uEyeDotNet">
+      <HintPath>..\..\..\..\..\..\..\Program Files\IDS\uEye\Develop\DotNet\uEyeDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>P:\Damien\Programmation\dll\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoClosingMessageBox.cs" />
+    <Compile Include="Automatism\Actuator.cs" />
+    <Compile Include="Automatism\AutomateScanner.cs" />
+    <Compile Include="Automatism\ScannedVariable.cs" />
+    <Compile Include="Automatism\_AutomatismInfo.cs" />
+    <Compile Include="Automatism\Camera\_CameraInfo.cs" />
+    <Compile Include="Automatism\Camera\CameraJAI.cs" />
+    <Compile Include="Automatism\Camera\Camera Sapera\CameraSapera.cs" />
+    <Compile Include="Automatism\Camera\Camera.cs" />
+    <Compile Include="Automatism\Camera\CameraIDS.cs" />
+    <Compile Include="Automatism\EjectionMem.cs" />
+    <Compile Include="Data\Acquisition.cs" />
+    <Compile Include="Data\Batch.cs" />
+    <Compile Include="Data\_DataInfo.cs" />
+    <Compile Include="Data\Seed.cs" />
+    <Compile Include="Data\Sorting.cs" />
+    <Compile Include="Data\View.cs" />
+    <Compile Include="IHM\Elements\Analyse\AnalysePartModel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IHM\Elements\Analyse\AnalysePartModel.Designer.cs">
+      <DependentUpon>AnalysePartModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\Elements\Analyse\ChartsAnalyse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IHM\Elements\Analyse\ChartsAnalyse.Designer.cs">
+      <DependentUpon>ChartsAnalyse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\Elements\Analyse\ChartUsCo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IHM\Elements\Analyse\ChartUsCo.Designer.cs">
+      <DependentUpon>ChartUsCo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\Elements\Analyse\LabelResume.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IHM\Elements\Analyse\Overview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IHM\Elements\Analyse\Overview.Designer.cs">
+      <DependentUpon>Overview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\Elements\Analyse\_AnalyseInfo.cs" />
+    <Compile Include="IHM\Elements\ChartPie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IHM\Elements\ChartPie.Designer.cs">
+      <DependentUpon>ChartPie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\Elements\CloseMessageBox.cs" />
+    <Compile Include="IHM\Elements\Identificator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IHM\Elements\Identificator.Designer.cs">
+      <DependentUpon>Identificator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\Elements\IPConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHM\Elements\IPConfig.Designer.cs">
+      <DependentUpon>IPConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\Elements\SeedCounter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IHM\Elements\SeedCounter.Designer.cs">
+      <DependentUpon>SeedCounter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\Elements\Seuils\CheckClasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHM\Elements\Seuils\CheckClasses.Designer.cs">
+      <DependentUpon>CheckClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\Elements\Seuils\Criteria.cs" />
+    <Compile Include="IHM\Elements\Seuils\Threshold.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IHM\Elements\Seuils\Threshold.Designer.cs">
+      <DependentUpon>Threshold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\Elements\Seuils\GlobalThreshold.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IHM\Elements\Seuils\GlobalThreshold.Designer.cs">
+      <DependentUpon>GlobalThreshold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\Elements\Seuils\_SeuilsInfo.cs" />
+    <Compile Include="IHM\Elements\Analyse\TreeViewUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IHM\Elements\Analyse\TreeViewUserControl.Designer.cs">
+      <DependentUpon>TreeViewUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\Elements\MorphoShow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IHM\Elements\MorphoShow.Designer.cs">
+      <DependentUpon>MorphoShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\Elements\_ElementsInfo.cs" />
+    <Compile Include="IHM\PageTab\AnalysisUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IHM\PageTab\AnalysisUC.Designer.cs">
+      <DependentUpon>AnalysisUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\PageTab\SortingUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IHM\PageTab\SortingUC.Designer.cs">
+      <DependentUpon>SortingUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\PageTab\_PageTabInfo.cs" />
+    <Compile Include="IHM\Elements\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHM\Elements\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\_IHMInfo.cs" />
+    <Compile Include="Image Processing\_ImageProcessingInfo.cs" />
+    <Compile Include="Preprocessing\_PreprocessingInfo.cs" />
+    <Compile Include="Resources\lang\Lang.cs" />
+    <Compile Include="Resources\lang\Res.en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\lang\Res.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\lang\_LangInfo.cs" />
+    <Compile Include="Resources\SVColor.cs" />
+    <Compile Include="Resources\_ResourcesInfo.cs" />
+    <Compile Include="SV360Controller.cs" />
+    <Compile Include="IHM\Elements\SVButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IHM\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHM\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\PageTab\ThresholdingUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IHM\PageTab\ThresholdingUC.Designer.cs">
+      <DependentUpon>ThresholdingUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ExcelController.cs" />
+    <Compile Include="Utils\Exception.cs" />
+    <Compile Include="Utils\HaploidUtils.cs" />
+    <Compile Include="Image Processing\HaploidIP.cs" />
+    <Compile Include="Image Processing\ImageProcessing.cs" />
+    <Compile Include="Image Processing\MorphoIP.cs" />
+    <Compile Include="Preprocessing\ConvoyeurPP.cs" />
+    <Compile Include="Preprocessing\GlobalVisionPP.cs" />
+    <Compile Include="Preprocessing\Preprocessing.cs" />
+    <Compile Include="Utils\BatchStats.cs" />
+    <Compile Include="Automatism\Camera\Camera Sapera\BayerProcessing.cs" />
+    <Compile Include="Automatism\Slave.cs" />
+    <Compile Include="Utils\ExcelWriter-Obsolete.cs" />
+    <Compile Include="Utils\ImageConverter.cs" />
+    <Compile Include="Utils\ImageSaver.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\StatsItem.cs" />
+    <Compile Include="Automatism\SystemController.cs" />
+    <Compile Include="Utils\2D.cs" />
+    <Compile Include="Utils\ListExtra.cs" />
+    <Compile Include="Utils\_UtilsInfo.cs" />
+    <Compile Include="_SV360Info.cs" />
+    <EmbeddedResource Include="IHM\Elements\Analyse\AnalysePartModel.resx">
+      <DependentUpon>AnalysePartModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\Elements\Analyse\ChartsAnalyse.resx">
+      <DependentUpon>ChartsAnalyse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\Elements\Analyse\ChartUsCo.resx">
+      <DependentUpon>ChartUsCo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\Elements\Analyse\Overview.resx">
+      <DependentUpon>Overview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\Elements\ChartPie.resx">
+      <DependentUpon>ChartPie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\Elements\Identificator.resx">
+      <DependentUpon>Identificator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\Elements\IPConfig.resx">
+      <DependentUpon>IPConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\Elements\SeedCounter.resx">
+      <DependentUpon>SeedCounter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\Elements\Seuils\CheckClasses.resx">
+      <DependentUpon>CheckClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\Elements\Seuils\Threshold.resx">
+      <DependentUpon>Threshold.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\Elements\MorphoShow.resx">
+      <DependentUpon>MorphoShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\PageTab\SortingUC.resx">
+      <DependentUpon>SortingUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\PageTab\ThresholdingUC.resx">
+      <DependentUpon>ThresholdingUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\PageTab\AnalysisUC.resx">
+      <DependentUpon>AnalysisUC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\Elements\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\lang\Res.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\lang\Res.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="IHM\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seedcounter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_learn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_stop_learn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_start_sorting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_stop_sorting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_start_excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_start_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_stop_excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_stop_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-146131_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\french_flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\english_flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo sv360.ico" />
+    <None Include="Resources\play-button-blue.png" />
+    <None Include="Resources\play-button_disabled.png" />
+    <None Include="Resources\stop_disabled.png" />
+    <None Include="Resources\stop.png" />
+    <None Include="Resources\play-button.png" />
+    <None Include="Resources\play_icon.png" />
+    <None Include="Resources\pause-circular-button_disabled.png" />
+    <None Include="Resources\pause-circular-button.png" />
+    <None Include="Resources\pause-button.png" />
+    <None Include="Resources\play-button-green.png" />
+    <None Include="Resources\pause-two-lines.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Accord.3.0.2\build\Accord.targets" Condition="Exists('..\packages\Accord.3.0.2\build\Accord.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Accord.3.0.2\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Accord.3.0.2\build\Accord.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

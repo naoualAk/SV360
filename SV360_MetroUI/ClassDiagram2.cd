@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SV360.Automatism.Actuator" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Automatism\Actuator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Automatism.EjectionMem" Collapsed="true">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Automatism\EjectionMem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Automatism.Slave" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIgAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Automatism\Slave.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Automatism.SystemController" Collapsed="true">
+    <Position X="15.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABgAAABQAEAAABAAAAAQAAEwAAAAEAQIAAAAACAAAI=</HashCode>
+      <FileName>Automatism\SystemController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Utils.BayerProcessing" Collapsed="true">
+    <Position X="22.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Automatism\Camera\Camera Sapera\BayerProcessing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Utils._2D" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABCAAAAAAAAEAAAAAQAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Utils\2D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Utils.BatchStats" Collapsed="true">
+    <Position X="21" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABIAQABAAAAAAAAAAAABAAAgAAIAAAAQAAAEAAAEAA=</HashCode>
+      <FileName>Utils\BatchStats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Utils.ExcelController" Collapsed="true">
+    <Position X="21" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIEAAAAAAAAAAAACAABgQAAAAAAAAAAgAAEAAAA=</HashCode>
+      <FileName>Utils\ExcelController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Utils.ExcelWriter" Collapsed="true">
+    <Position X="22.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAIEIAAgBAAAAAAECAAAAAAAAAAAAACAACAEAAAA=</HashCode>
+      <FileName>Utils\ExcelWriter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Utils.HaploidUtils" Collapsed="true">
+    <Position X="14" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAgAAAAAABAAAAEAAAAAEAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Utils\HaploidUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Utils.ImageConverter" Collapsed="true">
+    <Position X="15.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAACAAAAAAKAAAAAgAAAAAAAAAAAIAAAAAIA=</HashCode>
+      <FileName>Utils\ImageConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Utils.ImageSaver" Collapsed="true">
+    <Position X="17.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAEAAAAAAABAAAQAAAAAA=</HashCode>
+      <FileName>Utils\ImageSaver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Utils.ListExtra" Collapsed="true">
+    <Position X="25.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\ListExtra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Utils.MachineLearning" Collapsed="true">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCAAAAQABIAAAIAAAAAAAACAAgAIEAAABAAAAQSAANA=</HashCode>
+      <FileName>Utils\MachineLearning.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Utils.StatsItem" Collapsed="true">
+    <Position X="21" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAFAAQAAAQEAAEAAAAAAAAAAAAAAEAAAAAAAAgAAA=</HashCode>
+      <FileName>Utils\StatsItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Automatism.Camera.CameraSapera" Collapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JEQBRABBADEAIJAgACQQACAQEAAQgBgAIQoIAACAiAQ=</HashCode>
+      <FileName>Automatism\Camera\Camera Sapera\CameraSapera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Automatism.Camera.Camera" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACEAAAAAAAAAACAAEAAAABgAIAAAAACAAAA=</HashCode>
+      <FileName>Automatism\Camera\Camera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Automatism.Camera.CameraIDS" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAAiEAACAAAAAABCAACAAAACiAIAACAgCAACA=</HashCode>
+      <FileName>Automatism\Camera\CameraIDS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Automatism.Camera.CameraJAI" Collapsed="true">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAABAACEAACACEBAAQiAAEACAAAgAKEAAAADAIAA=</HashCode>
+      <FileName>Automatism\Camera\CameraJAI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Data.Acquisition" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAACAAAAgAAAAAAAAAEAAQABAAEAAAAAIAAAA=</HashCode>
+      <FileName>Data\Acquisition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SV360.Data.Batch" Collapsed="true">
+    <Position X="19.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAgAAAAAAiCABAAAAgAkIACwKgiAAAIAAIIAAACII=</HashCode>
+      <FileName>Data\Batch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Data.Seed" Collapsed="true">
+    <Position X="22.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgiEEAAABJIQAASGCAAEBAgABAAAAAAACgAAABoAg=</HashCode>
+      <FileName>Data\Seed.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Data.Sorting" Collapsed="true">
+    <Position X="17.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAABAAAAAAAAAAAAAAAAAEAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Data\Sorting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Data.View" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEACAABAAAAAgAAAAKEAAIAhAAiACAAIAAggA=</HashCode>
+      <FileName>Data\View.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SV360.IHM.Elements.AnalysePartModel" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAQAAACABAACAACAgAIAAAAAAQAAAAA=</HashCode>
+      <FileName>IHM\Elements\Analyse\AnalysePartModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.IHM.Elements.ChartUsCo" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIAAAoCAACCAAAAAQACBAAICAAAAAAAAAAQAAAAAIBA=</HashCode>
+      <FileName>IHM\Elements\Analyse\ChartUsCo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.IHM.Elements.ChartPie" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACAABAAAAACAAAACAAAAgAAAAAAAAIAAACA=</HashCode>
+      <FileName>IHM\Elements\ChartPie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.IHM.Elements.SeedCounter" Collapsed="true">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAABBAAAACAAAACAAAAAAAAAAAAAQAAACA=</HashCode>
+      <FileName>IHM\Elements\SeedCounter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.IHM.Elements.SVButton" Collapsed="true">
+    <Position X="12.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAACAAAgCAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IHM\Elements\SVButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.IHM.Elements.TreeViewUserControl" Collapsed="true">
+    <Position X="21" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQEQACAAACBgAgAAIACAAAACAAAAEAAAAAhQAAAAAAQ=</HashCode>
+      <FileName>IHM\Elements\TreeViewUserControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.IHM.Elements.Analyse.ChartsAnalyse" Collapsed="true">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAgACAAAAAAAACAAAACAAAAAAAAACAAAAAAACA=</HashCode>
+      <FileName>IHM\Elements\Analyse\ChartsAnalyse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.IHM.Elements.Analyse.LabelResume" Collapsed="true">
+    <Position X="19.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IHM\Elements\Analyse\LabelResume.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.IHM.Elements.Analyse.Overview" Collapsed="true">
+    <Position X="17.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAQACBAAAAAAACAAAACgAABgAAgAAAAAQABACA=</HashCode>
+      <FileName>IHM\Elements\Analyse\Overview.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.IHM.Elements.Seuils.CheckClasses" Collapsed="true">
+    <Position X="17.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAQAAAEAAA=</HashCode>
+      <FileName>IHM\Elements\Seuils\CheckClasses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.IHM.Elements.Seuils.Criteria" Collapsed="true">
+    <Position X="19.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAIAAAEAAAAAAAAAAAAASAAAIAAAAAAAAA=</HashCode>
+      <FileName>IHM\Elements\Seuils\Criteria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.IHM.Elements.Seuils.GlobalThreshold" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACCIgAAAAAACAAAACAAAAAAAQAAAAAABAACg=</HashCode>
+      <FileName>IHM\Elements\Seuils\GlobalThreshold.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.IHM.Elements.Seuils.Threshold" Collapsed="true">
+    <Position X="17.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQCAAICaCCLIASDABEDAEQCCAQVUASAMEIAiQEEAoTI=</HashCode>
+      <FileName>IHM\Elements\Seuils\Threshold.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.IHM.MainForm" Collapsed="true">
+    <Position X="14" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AADYAAQADCAAAgAAAACKCAACAAAAoCAAAEAAMoAAAIA=</HashCode>
+      <FileName>IHM\MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.IHM.MorphoShow" Collapsed="true">
+    <Position X="15.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAACCABBAAAICAAAACAAABAAAAAAAAAAAAACA=</HashCode>
+      <FileName>IHM\MorphoShow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.IHM.SettingsForm" Collapsed="true">
+    <Position X="15.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAKAAAAAAABCQAAACAAAAAAAAAAAAAAACACA=</HashCode>
+      <FileName>IHM\SettingsForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.UI" Collapsed="true">
+    <Position X="22.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>q4Ip89kWMP6Lx2cIxI6C5KUqQpXeLfqg7xh415FvAJI=</HashCode>
+      <FileName>IHM\OlderIHM\UI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Program" Collapsed="true">
+    <Position X="19.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAEgAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.SV360Controller" Collapsed="true">
+    <Position X="22.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBBQCAACgAAAAICAAASAAAAJAgAAAGAAIABAAACIAAA=</HashCode>
+      <FileName>SV360Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.IHM.PageTab.AnalysisUC" Collapsed="true">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIQAIACECiAAFgAAggSAiVgCAgIBIAAQBoAAFQAACAg=</HashCode>
+      <FileName>IHM\PageTab\AnalysisUC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.IHM.PageTab.SortingUC" Collapsed="true">
+    <Position X="19.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAYCCAICBAAAICJgAAKgAABgAEACIABAoBAoCA=</HashCode>
+      <FileName>IHM\PageTab\SortingUC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.IHM.PageTab.ThresholdingUC" Collapsed="true">
+    <Position X="19.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAQAAACCAAAAAAgADAAAASAACAAAAAAAAAAABAACA=</HashCode>
+      <FileName>IHM\PageTab\ThresholdingUC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Image_Processing.HaploidIP" Collapsed="true">
+    <Position X="5.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAIAAIAAGAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Image Processing\HaploidIP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Image_Processing.ImageProcessing" Collapsed="true">
+    <Position X="6.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Image Processing\ImageProcessing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Image_Processing.MorphoIP" Collapsed="true">
+    <Position X="7.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAQABAAAAAAAIAQAABEABAAAAAAAAAAAI=</HashCode>
+      <FileName>Image Processing\MorphoIP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Preprocessing.ConvoyeurPP" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECAAAgAAAAAAAACAAAAAAAAAAACpAAEAAIAAAAAgAAA=</HashCode>
+      <FileName>Preprocessing\ConvoyeurPP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Preprocessing.GlobalVisionPP" Collapsed="true">
+    <Position X="2.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAACAAAAAAAAAAAAJAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Preprocessing\GlobalVisionPP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Preprocessing.Preprocessing" Collapsed="true">
+    <Position X="1.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Preprocessing\Preprocessing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Properties.Resources" Collapsed="true">
+    <Position X="21" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABgBBGAABAgAAAAAEQBEAAAAQAIALAAAAQAAAAAgIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Properties.Settings" Collapsed="true">
+    <Position X="14" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Resources.lang.Lang" Collapsed="true">
+    <Position X="21" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAACAIAAEA=</HashCode>
+      <FileName>Resources\lang\Lang.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SV360.Resources.SVColor" Collapsed="true">
+    <Position X="14" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BgEABACAgBAIAEEAABAQAAAABGAAGAAAAAAAAIAKCQA=</HashCode>
+      <FileName>Resources\SVColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SV360.Data.WAVELENGTH" Collapsed="true">
+    <Position X="15.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAMAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Data\Acquisition.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SV360.IHM.Elements.Seuils.Comp" Collapsed="true">
+    <Position X="12.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IHM\Elements\Seuils\Threshold.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SV360.IHM.Elements.Seuils.Feature" Collapsed="true">
+    <Position X="14" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IHM\Elements\Seuils\Threshold.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

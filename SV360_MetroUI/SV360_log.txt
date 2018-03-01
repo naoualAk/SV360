@@ -1,0 +1,10 @@
+09/20/2017 11:09 : The mainForm throwed an exception
+09/20/2017 14:56 : The mainForm throwed an exception
+09/20/2017 14:57 : The mainForm throwed an exception
+09/20/2017 14:59 : The mainForm throwed an exception
+09/20/2017 15:44 : The mainForm throwed an exception
+09/20/2017 15:55 : The mainForm throwed an exception
+09/20/2017 15:55 : The mainForm throwed an exception
+09/20/2017 16:08 : The mainForm throwed an exception
+09/20/2017 16:15 : IDS init failed or not found
+09/20/2017 16:15 : Camera init is failed.

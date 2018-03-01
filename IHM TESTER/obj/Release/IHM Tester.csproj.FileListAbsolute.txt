@@ -1,0 +1,82 @@
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\IHM TESTER.exe.config
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\obj\Release\IHM TESTER.exe
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\Accord.dll.config
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\IHM TESTER.exe
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\IHM TESTER.pdb
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\MetroFramework.Design.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\MetroFramework.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\MetroFramework.Fonts.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\ObjectListView.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\SV360.exe
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\System.Windows.Interactivity.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\Emgu.CV.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\EPPlus.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\Accord.MachineLearning.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\DALSA.SaperaLT.SapClassBasic.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\Emgu.CV.UI.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\ModbusTCP.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\Jai_FactoryDotNET.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\uEyeDotNet.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\Emgu.Util.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\Accord.Statistics.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\Accord.Math.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\Accord.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\ZedGraph.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\log4net.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\SV360.pdb
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\ObjectListView.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\Emgu.CV.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\EPPlus.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\Accord.MachineLearning.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\Emgu.CV.UI.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\Jai_FactoryDotNET.pdb
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\Jai_FactoryDotNET.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\Emgu.Util.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\Accord.Statistics.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\Accord.Math.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\Accord.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\ZedGraph.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\log4net.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\en\SV360.resources.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Release\fr\SV360.resources.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\obj\Release\IHM Tester.csprojResolveAssemblyReference.cache
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\obj\Release\IHM_TESTER.Form1.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\obj\Release\IHM_TESTER.Form2.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\obj\Release\IHM_TESTER.Properties.Resources.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\obj\Release\IHM Tester.csproj.GenerateResource.Cache
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\obj\Release\IHM TESTER.pdb
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\IHM TESTER.exe.config
+I:\Projet\SV360\SV360\IHM TESTER\obj\Release\IHM TESTER.exe
+I:\Projet\SV360\SV360\IHM TESTER\obj\Release\IHM TESTER.pdb
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\Accord.dll.config
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\IHM TESTER.exe
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\IHM TESTER.pdb
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\ObjectListView.dll
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\SV360.exe
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\System.Windows.Interactivity.dll
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\EPPlus.dll
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\Emgu.CV.dll
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\Accord.MachineLearning.dll
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\Emgu.CV.UI.dll
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\ModbusTCP.dll
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\uEyeDotNet.dll
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\Emgu.Util.dll
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\Accord.Statistics.dll
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\Accord.Math.dll
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\Accord.dll
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\ZedGraph.dll
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\ObjectListView.xml
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\EPPlus.xml
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\Emgu.CV.xml
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\Accord.MachineLearning.xml
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\Emgu.CV.UI.xml
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\Emgu.Util.xml
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\Accord.Statistics.xml
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\Accord.Math.xml
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\Accord.xml
+I:\Projet\SV360\SV360\IHM TESTER\bin\Release\ZedGraph.xml
+I:\Projet\SV360\SV360\IHM TESTER\obj\Release\IHM Tester.csprojResolveAssemblyReference.cache
+I:\Projet\SV360\SV360\IHM TESTER\obj\Release\IHM_TESTER.Form1.resources
+I:\Projet\SV360\SV360\IHM TESTER\obj\Release\IHM_TESTER.Form2.resources
+I:\Projet\SV360\SV360\IHM TESTER\obj\Release\IHM_TESTER.Properties.Resources.resources
+I:\Projet\SV360\SV360\IHM TESTER\obj\Release\IHM Tester.csproj.GenerateResource.Cache

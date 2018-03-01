@@ -1,0 +1,11 @@
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\bin\Debug\SV360_MetroUI.exe
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\bin\Debug\SV360_MetroUI.pdb
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\bin\Debug\MetroFramework.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\bin\Debug\MetroFramework.Fonts.dll
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\obj\x86\Debug\SV360_MetroUI.Form1.resources
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\obj\x86\Debug\SV360_MetroUI.Properties.Resources.resources
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\obj\x86\Debug\SV360_MetroUI.exe
+D:\Users\emeric.leclair\Desktop\Emeric Leclair\Programmation\Code\SV360_MetroUI\SV360_MetroUI\obj\x86\Debug\SV360_MetroUI.pdb

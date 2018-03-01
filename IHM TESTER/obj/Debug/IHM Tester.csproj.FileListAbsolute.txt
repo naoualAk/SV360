@@ -1,0 +1,47 @@
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\Accord.dll.config
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\IHM TESTER.exe.config
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\IHM TESTER.exe
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\IHM TESTER.pdb
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\ObjectListView.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\SV360.exe
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\Emgu.CV.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\EPPlus.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\Accord.MachineLearning.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\DALSA.SaperaLT.SapClassBasic.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\Emgu.CV.UI.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\ModbusTCP.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\Jai_FactoryDotNET.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\uEyeDotNet.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\Emgu.Util.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\Accord.Statistics.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\Accord.Math.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\Accord.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\ZedGraph.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\log4net.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\SV360.pdb
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\ObjectListView.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\Emgu.CV.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\EPPlus.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\Accord.MachineLearning.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\Emgu.CV.UI.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\Jai_FactoryDotNET.pdb
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\Jai_FactoryDotNET.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\Emgu.Util.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\Accord.Statistics.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\Accord.Math.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\Accord.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\ZedGraph.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\log4net.xml
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\en\SV360.resources.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\fr\SV360.resources.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\obj\Debug\IHM Tester.csprojResolveAssemblyReference.cache
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\obj\Debug\IHM_TESTER.Form1.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\obj\Debug\IHM_TESTER.Form2.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\obj\Debug\IHM_TESTER.Properties.Resources.resources
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\obj\Debug\IHM Tester.csproj.GenerateResource.Cache
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\obj\Debug\IHM TESTER.exe
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\obj\Debug\IHM TESTER.pdb
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\MetroFramework.Design.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\MetroFramework.dll
+C:\Users\damien.delhay\Source\Repos\SV360\SV360\IHM TESTER\bin\Debug\MetroFramework.Fonts.dll

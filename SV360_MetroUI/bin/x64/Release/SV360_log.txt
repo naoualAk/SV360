@@ -1,0 +1,38 @@
+06/12/2017 10:18 : Loading parameter failed: FILE_WRITE_OPEN_ERROR
+06/12/2017 10:18 : camera init is failed.
+06/12/2017 10:46 : Loading parameter failed: FILE_WRITE_OPEN_ERROR
+06/12/2017 10:46 : camera init is failed.
+06/12/2017 10:49 : Loading parameter failed: FILE_WRITE_OPEN_ERROR
+06/12/2017 10:49 : camera init is failed.
+06/12/2017 10:53 : Loading parameter failed: FILE_WRITE_OPEN_ERROR
+06/12/2017 10:53 : camera init is failed.
+06/12/2017 10:55 : Loading parameter failed: FILE_WRITE_OPEN_ERROR
+06/12/2017 10:55 : camera init is failed.
+06/12/2017 14:54 : IDS init failed or not found
+06/12/2017 14:54 : Camera init is failed.
+06/12/2017 15:04 : Loading parameter failed: FILE_WRITE_OPEN_ERROR
+06/12/2017 15:04 : Camera init is failed.
+06/21/2017 19:06 : Cannot connect to the system's PLC.
+Check your connections and try again.
+
+Error details :
+System.Net.Sockets.SocketException (0x80004005): Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu 10.33.131.221:502
+   à System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   à System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   à ModbusTCP.Master.connect(String ip, UInt16 port)
+   à SV360.Automatism.SystemController..ctor() dans C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Automatism\SystemController.cs:ligne 39
+06/21/2017 19:07 : Cannot connect to the system's PLC.
+Check your connections and try again.
+
+Error details :
+System.Net.Sockets.SocketException (0x80004005): Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu 10.33.131.220:502
+   à System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   à System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   à ModbusTCP.Master.connect(String ip, UInt16 port)
+   à SV360.Automatism.SystemController..ctor() dans C:\Users\damien.delhay\Source\Repos\SV360\SV360\SV360_MetroUI\Automatism\SystemController.cs:ligne 39
+06/22/2017 08:55 : IDS init failed or not found
+06/22/2017 08:55 : Camera init is failed.
+09/20/2017 11:07 : IDS init failed or not found
+09/20/2017 11:07 : Camera init is failed.
+09/20/2017 11:08 : The mainForm throwed an exception
+09/20/2017 11:08 : The mainForm throwed an exception
